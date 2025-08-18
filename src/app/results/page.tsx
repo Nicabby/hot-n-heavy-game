@@ -14,11 +14,11 @@ export default function Results() {
   ]
   
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#f6f3e2'}}>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-8" style={{color: '#bb3309'}}>Game Complete! 🎉</h1>
+    <div className="viewport-container" style={{backgroundColor: '#f6f3e2'}}>
+      <div className="content-wrapper">
+        <h1 className="text-2xl md:text-4xl font-bold font-sans text-center mb-6" style={{color: '#bb3309'}}>Game Complete! 🎉</h1>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="w-full">
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             
             <div className="bg-white rounded-xl p-6 border-2 shadow-lg" style={{borderColor: '#468675'}}>

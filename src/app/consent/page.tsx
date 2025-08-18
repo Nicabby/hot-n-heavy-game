@@ -13,10 +13,10 @@ export default function Consent() {
   ]
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#f6f3e2'}}>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-8" style={{color: '#bb3309'}}>Set Your Boundaries</h1>
-        <div className="max-w-3xl mx-auto bg-white rounded-xl p-8 border-2 shadow-lg" style={{borderColor: '#468675'}}>
+    <div className="viewport-container" style={{backgroundColor: '#f6f3e2'}}>
+      <div className="content-wrapper">
+        <h1 className="text-2xl md:text-4xl font-bold font-sans text-center mb-6" style={{color: '#bb3309'}}>Set Your Boundaries</h1>
+        <div className="w-full bg-white rounded-xl p-4 md:p-8 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675', maxHeight: 'calc(100vh - 200px)'}}>
           
           <div className="mb-8">
             <h2 className="text-2xl mb-4" style={{color: '#5b5450'}}>Content Preferences</h2>

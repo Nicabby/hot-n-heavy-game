@@ -14,8 +14,8 @@ export default function Game() {
   const [currentPlayer] = useState("Alex")
   
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#f6f3e2'}}>
-      <div className="container mx-auto px-4 py-8">
+    <div className="viewport-container" style={{backgroundColor: '#f6f3e2'}}>
+      <div className="content-wrapper">
         
         <div className="flex justify-between items-center mb-8">
           <div style={{color: '#5b5450'}}>
@@ -29,7 +29,7 @@ export default function Game() {
           </div>
         </div>
         
-        <div className="max-w-2xl mx-auto">
+        <div className="w-full max-w-2xl mx-auto">
           <div className="bg-white rounded-xl p-8 border-2 mb-8 shadow-lg" style={{borderColor: '#468675'}}>
             <div className="mb-6">
               <div className="flex flex-wrap gap-2 mb-4">

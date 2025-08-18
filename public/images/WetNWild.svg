@@ -1,0 +1,7 @@
+<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="75" cy="75" r="70" fill="#00a1cf" stroke="#f6f3e2" stroke-width="5"/>
+  <text x="75" y="50" text-anchor="middle" fill="white" font-family="serif" font-size="16" font-weight="bold">The game of</text>
+  <text x="75" y="80" text-anchor="middle" fill="#034078" font-family="serif" font-size="20" font-weight="bold">LIFESTYLE</text>
+  <text x="75" y="105" text-anchor="middle" fill="white" font-family="serif" font-size="14">Wet 'N Wild Edition</text>
+  <polygon points="75,115 70,125 80,125" fill="white"/>
+</svg>

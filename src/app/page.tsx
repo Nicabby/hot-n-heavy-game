@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -33,21 +35,31 @@ export default function Home() {
         </div>
         
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4 max-w-md mx-auto">
           <Link 
             href="/lobby"
-            className="w-full sm:w-auto px-8 sm:px-12 py-4 rounded-full text-white text-lg sm:text-xl font-bold transform hover:scale-105 transition-all duration-200 shadow-lg text-center"
+            className="w-full px-8 py-4 rounded-full text-white text-lg font-bold transition-all duration-200 shadow-lg text-center hover:opacity-90 hover:scale-105"
             style={{backgroundColor: '#bb3309'}}
           >
             Start Playing
           </Link>
           
-          <button className="w-full sm:w-auto px-6 sm:px-8 py-4 rounded-full border-2 text-lg font-semibold transition-all duration-200 hover:bg-opacity-20"
-                  style={{
-                    borderColor: '#468675',
-                    color: '#468675',
-                    backgroundColor: 'transparent'
-                  }}>
+          <button 
+            className="w-full px-8 py-4 rounded-full border-2 text-lg font-semibold transition-all duration-200 text-center hover:scale-105"
+            style={{
+              borderColor: '#468675',
+              color: '#468675',
+              backgroundColor: 'transparent'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#468675';
+              e.currentTarget.style.color = 'white';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'transparent';
+              e.currentTarget.style.color = '#468675';
+            }}
+          >
             How to Play
           </button>
         </div>

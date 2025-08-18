@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{backgroundColor: '#f6f3e2'}}>
+    <div className="min-h-screen relative overflow-hidden flex items-center justify-center" style={{backgroundColor: '#f6f3e2'}}>
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-5">
         <div className="w-full h-full" style={{
@@ -11,8 +11,7 @@ export default function Home() {
         }}></div>
       </div>
       
-      <div className="relative z-10 container mx-auto px-4 py-16 text-center">
-        <div className="max-w-4xl mx-auto">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 py-8 text-center">
           
           {/* Main logo/title section */}
           <div className="mb-12">
@@ -56,7 +55,6 @@ export default function Home() {
             </div>
           </div>
           
-        </div>
       </div>
     </div>
   );

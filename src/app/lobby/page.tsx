@@ -129,26 +129,26 @@ export default function Lobby() {
   ]
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#f6f3e2'}}>
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen flex flex-col" style={{backgroundColor: '#f6f3e2'}}>
+      <div className="w-full max-w-6xl mx-auto px-4 py-4 flex-1 flex flex-col">
         
         {/* Header with TGOL Logo */}
-        <div className="text-center mb-8">
-          <div className="w-24 h-24 mx-auto mb-4">
+        <div className="text-center mb-4">
+          <div className="w-16 h-16 mx-auto mb-2">
             <Image
               src="/images/TGOLbase.png"
               alt="The Game of Lifestyle Logo"
-              width={96}
-              height={96}
+              width={64}
+              height={64}
               className="mx-auto"
             />
           </div>
-          <h1 className="text-3xl font-bold font-sans" style={{color: '#bb3309'}}>Game Setup</h1>
-          <p className="text-sm mt-2" style={{color: '#5b5450'}}>Step {currentStep} of {totalSteps}</p>
+          <h1 className="text-2xl md:text-3xl font-bold font-sans" style={{color: '#bb3309'}}>Game Setup</h1>
+          <p className="text-sm mt-1" style={{color: '#5b5450'}}>Step {currentStep} of {totalSteps}</p>
         </div>
 
         {/* Progress Bar */}
-        <div className="max-w-md mx-auto mb-8">
+        <div className="max-w-md mx-auto mb-4">
           <div className="flex space-x-2">
             {[1, 2, 3].map((step) => (
               <div
@@ -163,7 +163,7 @@ export default function Lobby() {
         </div>
 
         {/* Sliding Content */}
-        <div className="max-w-2xl mx-auto relative overflow-hidden">
+        <div className="w-full max-w-4xl mx-auto relative overflow-hidden flex-1 flex items-center">
           <div 
             className="flex transition-transform duration-500 ease-in-out"
             style={{
@@ -172,10 +172,10 @@ export default function Lobby() {
           >
             
             {/* Step 1: Participants */}
-            <div className="w-full flex-shrink-0 bg-white rounded-xl p-8 border-2 shadow-lg" style={{borderColor: '#468675'}}>
-              <h2 className="text-2xl font-bold font-sans mb-6 text-center" style={{color: '#5b5450'}}>Who&apos;s Playing?</h2>
+            <div className="w-full flex-shrink-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg" style={{borderColor: '#468675'}}>
+              <h2 className="text-xl md:text-2xl font-bold font-sans mb-4 text-center" style={{color: '#5b5450'}}>Who&apos;s Playing?</h2>
               
-              <div className="space-y-4 mb-6">
+              <div className="space-y-3 mb-4 max-h-60 overflow-y-auto">
                 {gameSetup.participants.map((participant, index) => (
                   <div key={index} className="flex gap-2 items-center">
                     <input
@@ -213,17 +213,17 @@ export default function Lobby() {
             </div>
 
             {/* Step 2: Deck Selection */}
-            <div className="w-full flex-shrink-0 bg-white rounded-xl p-8 border-2 shadow-lg ml-4" style={{borderColor: '#468675'}}>
-              <h2 className="text-2xl font-bold font-sans mb-6 text-center" style={{color: '#5b5450'}}>Choose Your Adventure</h2>
+            <div className="w-full flex-shrink-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg ml-4" style={{borderColor: '#468675'}}>
+              <h2 className="text-xl md:text-2xl font-bold font-sans mb-4 text-center" style={{color: '#5b5450'}}>Choose Your Adventure</h2>
               
-              <div className="flex justify-center items-center space-x-8 mb-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 {decks.map((deck) => (
                   <button
                     key={deck.name}
                     onClick={() => setGameSetup(prev => ({ ...prev, selectedDeck: deck.name }))}
-                    className={`flex flex-col items-center p-4 rounded-xl transition-all duration-300 ${
+                    className={`flex flex-col items-center p-3 rounded-xl transition-all duration-300 ${
                       gameSetup.selectedDeck === deck.name 
-                        ? 'scale-110 shadow-lg' 
+                        ? 'scale-105 shadow-lg' 
                         : 'hover:scale-105 opacity-70 hover:opacity-100'
                     }`}
                     style={{
@@ -232,16 +232,16 @@ export default function Lobby() {
                       backgroundColor: gameSetup.selectedDeck === deck.name ? '#fcf9e8' : 'white'
                     }}
                   >
-                    <div className="w-20 h-20 mb-3 flex items-center justify-center">
+                    <div className="w-16 h-16 mb-2 flex items-center justify-center">
                       <Image
                         src={deck.logo}
                         alt={`${deck.name} logo`}
-                        width={80}
-                        height={80}
+                        width={64}
+                        height={64}
                         className="opacity-90 hover:opacity-100 transition-opacity"
                       />
                     </div>
-                    <span className="text-sm font-semibold text-center" style={{color: deck.color}}>
+                    <span className="text-xs md:text-sm font-semibold text-center" style={{color: deck.color}}>
                       {deck.name}
                     </span>
                   </button>
@@ -258,10 +258,10 @@ export default function Lobby() {
             </div>
 
             {/* Step 3: Pre-game Settings */}
-            <div className="w-full flex-shrink-0 bg-white rounded-xl p-8 border-2 shadow-lg ml-4" style={{borderColor: '#468675'}}>
-              <h2 className="text-2xl font-bold font-sans mb-6 text-center" style={{color: '#5b5450'}}>Game Settings</h2>
+            <div className="w-full flex-shrink-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg ml-4" style={{borderColor: '#468675'}}>
+              <h2 className="text-xl md:text-2xl font-bold font-sans mb-4 text-center" style={{color: '#5b5450'}}>Game Settings</h2>
               
-              <div className="space-y-8">
+              <div className="space-y-4 max-h-96 overflow-y-auto">
                 
                 {/* Swap Type */}
                 <div>
@@ -383,7 +383,7 @@ export default function Lobby() {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-between max-w-2xl mx-auto mt-8">
+        <div className="flex justify-between w-full max-w-4xl mx-auto mt-4 px-4">
           <button
             onClick={prevStep}
             disabled={currentStep === 1}

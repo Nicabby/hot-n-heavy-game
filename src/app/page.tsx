@@ -35,7 +35,7 @@ export default function Home() {
         </div>
         
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4 max-w-md mx-auto">
+        <div className="flex flex-col gap-4 justify-center items-center">
           <Link 
             href="/lobby"
             className="w-full px-8 py-4 rounded-full text-white text-lg font-bold transition-all duration-200 shadow-lg text-center hover:opacity-90 hover:scale-105"

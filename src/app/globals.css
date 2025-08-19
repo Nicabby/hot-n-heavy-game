@@ -45,23 +45,31 @@ body {
   box-sizing: border-box;
 }
 
-/* Responsive content wrapper */
+/* Responsive content wrapper - ~3.5 inches centered */
 .content-wrapper {
   width: 100%;
-  max-width: 95vw;
+  max-width: 350px;
   margin: 0 auto;
-  padding: 0 0.5rem;
+  padding: 0 1rem;
   box-sizing: border-box;
 }
 
-/* Compact content for smaller screens */
-@media (max-width: 768px) {
-  .viewport-container {
-    padding: 0.25rem;
-  }
-  
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 400px) {
   .content-wrapper {
-    max-width: 98vw;
-    padding: 0 0.25rem;
+    max-width: 90vw;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-wrapper {
+    max-width: 450px;
   }
 }

@@ -211,7 +211,7 @@ export default function Lobby() {
             <div className="w-full flex-shrink-0 bg-white rounded-xl p-3 md:p-4 border-2 shadow-lg ml-4 overflow-y-auto" style={{borderColor: '#468675'}}>
               <h2 className="text-lg md:text-xl font-bold font-sans mb-3 text-center" style={{color: '#5b5450'}}>Choose Your Adventure</h2>
               
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-4">
+              <div className="grid grid-cols-2 gap-3 mb-4">
                 {decks.map((deck) => (
                   <button
                     key={deck.name}
@@ -378,7 +378,7 @@ export default function Lobby() {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-between w-full px-2 max-w-md mx-auto">
+        <div className="flex justify-between w-full">
           <button
             onClick={prevStep}
             disabled={currentStep === 1}

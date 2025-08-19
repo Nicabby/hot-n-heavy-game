@@ -160,9 +160,9 @@ export default function Lobby() {
         {/* Sliding Content */}
         <div className="w-full relative overflow-hidden mb-4" style={{height: 'calc(100vh - 260px)', minHeight: '350px'}}>
           <div 
-            className="flex transition-transform duration-500 ease-in-out h-full"
+            className="flex gap-4 transition-transform duration-500 ease-in-out h-full"
             style={{
-              transform: `translateX(-${(currentStep - 1) * 100}%)`
+              transform: `translateX(calc(-${(currentStep - 1) * 100}% - ${(currentStep - 1) * 1}rem))`
             }}
           >
             
@@ -208,7 +208,7 @@ export default function Lobby() {
             </div>
 
             {/* Step 2: Deck Selection */}
-            <div className="w-full flex-shrink-0 bg-white rounded-xl p-3 md:p-4 border-2 shadow-lg ml-4 overflow-y-auto" style={{borderColor: '#468675'}}>
+            <div className="w-full flex-shrink-0 bg-white rounded-xl p-3 md:p-4 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675'}}>
               <h2 className="text-lg md:text-xl font-bold font-sans mb-3 text-center" style={{color: '#5b5450'}}>Choose Your Adventure</h2>
               
               <div className="grid grid-cols-2 gap-3 mb-4">
@@ -253,7 +253,7 @@ export default function Lobby() {
             </div>
 
             {/* Step 3: Pre-game Settings */}
-            <div className="w-full flex-shrink-0 bg-white rounded-xl p-3 md:p-4 border-2 shadow-lg ml-4 overflow-y-auto" style={{borderColor: '#468675'}}>
+            <div className="w-full flex-shrink-0 bg-white rounded-xl p-3 md:p-4 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675'}}>
               <h2 className="text-lg md:text-xl font-bold font-sans mb-3 text-center" style={{color: '#5b5450'}}>Game Settings</h2>
               
               <div className="space-y-3">

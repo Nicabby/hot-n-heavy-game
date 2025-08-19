@@ -45,31 +45,31 @@ body {
   box-sizing: border-box;
 }
 
-/* Responsive content wrapper - ~3.5 inches centered */
+/* Responsive content wrapper - ~4 inches centered */
 .content-wrapper {
   width: 100%;
-  max-width: 350px;
+  max-width: 384px;
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
 }
 
 /* Responsive adjustments for different screen sizes */
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .content-wrapper {
-    max-width: 90vw;
+    max-width: 95vw;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 768px) {
   .content-wrapper {
-    max-width: 400px;
+    max-width: 420px;
   }
 }
 
 @media (min-width: 1024px) {
   .content-wrapper {
-    max-width: 450px;
+    max-width: 480px;
   }
 }

@@ -31,7 +31,7 @@ export default function Lobby() {
     heatLevelAdjust: false
   })
 
-  const totalSteps = 5
+  const totalSteps = 4
 
   const nextStep = () => {
     if (currentStep < totalSteps) {
@@ -181,7 +181,7 @@ export default function Lobby() {
         {/* Progress Bar */}
         <div className="max-w-md mx-auto mb-6">
           <div className="flex space-x-1">
-            {[1, 2, 3, 4, 5].map((step) => (
+            {[1, 2, 3, 4].map((step) => (
               <div
                 key={step}
                 className="flex-1 h-2 rounded-full transition-colors duration-300"
@@ -369,40 +369,6 @@ export default function Lobby() {
             </div>
             )}
 
-            {/* Step 5: Consent & 18+ Disclaimer */}
-            {currentStep === 5 && (
-            <div className="absolute inset-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#bb3309'}}>
-              <h2 className="text-xl md:text-2xl font-bold font-sans mb-6 text-center" style={{color: '#bb3309'}}>Important: Consent & Age Verification</h2>
-              
-              <div className="space-y-6">
-                <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4">
-                  <h3 className="text-lg font-bold mb-3 text-red-700">🔞 Adults Only (18+)</h3>
-                  <p className="text-sm text-red-700 leading-relaxed">
-                    This game contains adult content and is intended only for consenting adults aged 18 and over. 
-                    By continuing, you confirm that all participants are 18+ years of age.
-                  </p>
-                </div>
-
-                <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-                  <h3 className="text-lg font-bold mb-3 text-blue-700">✋ Consent & Safety</h3>
-                  <div className="text-sm text-blue-700 space-y-2">
-                    <p>• All participants must freely consent to play</p>
-                    <p>• Anyone can stop or pass at any time</p>
-                    <p>• Respect all boundaries and comfort levels</p>
-                    <p>• Communication is key - check in with each other</p>
-                  </div>
-                </div>
-
-                <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
-                  <h3 className="text-lg font-bold mb-3 text-green-700">🛡️ Your Agreement</h3>
-                  <p className="text-sm text-green-700 leading-relaxed">
-                    By starting this game, all participants acknowledge they are consenting adults who understand 
-                    the nature of this game and agree to participate responsibly.
-                  </p>
-                </div>
-              </div>
-            </div>
-            )}
         </div>
 
         {/* Navigation Buttons */}

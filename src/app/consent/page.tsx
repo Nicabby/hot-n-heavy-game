@@ -1,69 +1,44 @@
 export default function Consent() {
-  const contentCategories = [
-    'Kissing',
-    'Touching',
-    'Oral',
-    'Roleplay',
-    'Bondage',
-    'Toys',
-    'Public',
-    'Bisexuality',
-    'Anal',
-    'Rough Play'
-  ]
-
   return (
     <div className="viewport-container" style={{backgroundColor: '#f6f3e2'}}>
       <div className="content-wrapper">
-        <h1 className="text-2xl md:text-4xl font-bold font-sans text-center mb-6" style={{color: '#bb3309'}}>Set Your Boundaries</h1>
-        <div className="w-full bg-white rounded-xl p-4 md:p-8 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675', maxHeight: 'calc(100vh - 200px)'}}>
-          
-          <div className="mb-8">
-            <h2 className="text-2xl mb-4" style={{color: '#5b5450'}}>Content Preferences</h2>
-            <p className="mb-6" style={{color: '#5b5450', opacity: 0.8}}>Toggle what you&apos;re comfortable with. Only cards matching your preferences will appear in your game.</p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {contentCategories.map((category) => (
-                <label key={category} className="flex items-center space-x-3 cursor-pointer">
-                  <input 
-                    type="checkbox" 
-                    className="w-5 h-5 rounded border-2 border-purple-500/50 bg-black/30 text-purple-500 focus:ring-purple-400"
-                    defaultChecked
-                  />
-                  <span style={{color: '#5b5450'}}>{category}</span>
-                </label>
-              ))}
+        <h1 className="text-xl md:text-2xl font-bold font-sans text-center mb-4" style={{color: '#bb3309'}}>Consent & Disclaimer</h1>
+        
+        <div className="w-full bg-white rounded-xl p-4 md:p-5 border-2 shadow-lg" style={{borderColor: '#bb3309'}}>
+          <div className="space-y-4">
+            <div className="bg-red-50 border-2 border-red-200 rounded-lg p-3">
+              <h3 className="text-base font-bold mb-2 text-red-700">🔞 Adults Only (18+)</h3>
+              <p className="text-sm text-red-700">
+                This game contains adult content and is intended only for consenting adults aged 18 and over. 
+                By continuing, you confirm that all participants are 18+ years of age.
+              </p>
+            </div>
+
+            <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-3">
+              <h3 className="text-base font-bold mb-2 text-blue-700">✋ Consent & Safety</h3>
+              <div className="text-sm text-blue-700 space-y-1">
+                <p>• All participants must freely consent to play</p>
+                <p>• Anyone can stop or pass at any time</p>
+                <p>• Respect all boundaries and comfort levels</p>
+                <p>• Communication is key - check in with each other</p>
+              </div>
+            </div>
+
+            <div className="bg-green-50 border-2 border-green-200 rounded-lg p-3">
+              <h3 className="text-base font-bold mb-2 text-green-700">🛡️ Your Agreement</h3>
+              <p className="text-sm text-green-700">
+                By starting this game, all participants acknowledge they are consenting adults who understand 
+                the nature of this game and agree to participate responsibly.
+              </p>
             </div>
           </div>
           
-          <div className="mb-8">
-            <h3 className="text-xl mb-4" style={{color: '#5b5450'}}>Safety & Consent</h3>
-            <div className="space-y-4">
-              <div>
-                <label className="block mb-2 font-semibold" style={{color: '#5b5450'}}>Safe Word (Optional)</label>
-                <input 
-                  type="text" 
-                  placeholder="Enter a safe word..."
-                  className="w-full px-4 py-2 rounded-lg border-2 focus:outline-none transition-colors"
-                  style={{
-                    borderColor: '#468675',
-                    backgroundColor: '#fcf9e8',
-                    color: '#5b5450'
-                  }}
-                />
-              </div>
-              
-              <div className="rounded-lg p-4 border-2" style={{backgroundColor: '#fcf9e8', borderColor: '#bb3309'}}>
-                <p className="text-sm" style={{color: '#5b5450'}}>
-                  <strong>Remember:</strong> All activities are consensual. You can pass on any card at any time. 
-                  Respect boundaries and communicate openly with your partner(s).
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <button className="w-full py-3 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity" style={{backgroundColor: '#bb3309'}}>
-            Continue to Game
+          <button 
+            onClick={() => window.location.href = '/game'}
+            className="w-full mt-4 py-3 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity" 
+            style={{backgroundColor: '#bb3309'}}
+          >
+            Start Game →
           </button>
         </div>
       </div>

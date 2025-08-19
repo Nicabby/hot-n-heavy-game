@@ -155,8 +155,8 @@ export default function Lobby() {
   ]
 
   const categories = [
-    'Oral', 'Anal', 'Kissing', 'Full Penetration', 'Touching', 'Roleplay', 
-    'Toys', 'Bondage', 'Public Play', 'Group Play'
+    'Kissing', 'Touching', 'Oral', 'Group Play', 'Roleplay', 'Exhibition', 
+    'Foreplay', 'Undressing', 'Blindfold', 'Communication'
   ]
 
   return (

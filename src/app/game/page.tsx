@@ -41,38 +41,87 @@ export default function Game() {
     }
   }, [])
 
+  // Tag consolidation function
+  const consolidateTag = (tag: string): string => {
+    const tagLower = tag.toLowerCase()
+    
+    // Kissing consolidation
+    if (tagLower.includes('kissing') || tagLower.includes('kiss')) return 'Kissing'
+    
+    // Touching consolidation  
+    if (tagLower.includes('touch') || tagLower.includes('rub') || tagLower.includes('caress')) return 'Touching'
+    
+    // Oral consolidation
+    if (tagLower.includes('oral') || tagLower.includes('suck') || tagLower.includes('lick') || tagLower.includes('tongue')) return 'Oral'
+    
+    // Group play consolidation
+    if (tagLower.includes('group') || tagLower.includes('threesome')) return 'Group Play'
+    
+    // Roleplay consolidation  
+    if (tagLower.includes('roleplay') || tagLower.includes('porn scene')) return 'Roleplay'
+    
+    // Exhibition/Voyeurism
+    if (tagLower.includes('exhibition') || tagLower.includes('voyeur')) return 'Exhibition'
+    
+    // Teasing/Foreplay
+    if (tagLower.includes('teas') || tagLower.includes('foreplay')) return 'Foreplay'
+    
+    // Strip/undressing
+    if (tagLower.includes('strip') || tagLower.includes('clothing')) return 'Undressing'
+    
+    // Blindfold
+    if (tagLower.includes('blindfold')) return 'Blindfold'
+    
+    // Default return original
+    return tag
+  }
+
   const loadCards = (deck: string, heatLevel: number, categories: string[]) => {
-    // Card data based on deck selection
+    // Real card data from CSV
+    const hotNHeavyCards: Card[] = [
+      // Level 1 Cards
+      { id: 1, text: "Pick someone who is not your partner and kiss them softly on the lips.", tags: ["Kissing", "Foreplay"], heatLevel: "🔥", category: "Kissing" },
+      { id: 2, text: "Pick two people and have them passionately kiss each other.", tags: ["Kissing", "Exhibition", "Group Play"], heatLevel: "🔥", category: "Group Play" },
+      { id: 3, text: "Sensually kiss this person in three different places other than their lips.", tags: ["Kissing"], heatLevel: "🔥", category: "Kissing" },
+      { id: 4, text: "Nibble the person's ear until they moan or giggle.", tags: ["Kissing", "Foreplay"], heatLevel: "🔥", category: "Kissing" },
+      { id: 5, text: "Remove one article of your own clothing.", tags: ["Undressing", "Exhibition"], heatLevel: "🔥", category: "Exhibition" },
+      { id: 6, text: "Help this person remove one article of clothing.", tags: ["Undressing", "Touching"], heatLevel: "🔥", category: "Touching" },
+      { id: 7, text: "Softly kiss this person's neck and collar bone.", tags: ["Kissing"], heatLevel: "🔥", category: "Kissing" },
+      { id: 8, text: "While kissing this person, take their hand and guide it to a place you want them to rub.", tags: ["Kissing", "Touching"], heatLevel: "🔥", category: "Touching" },
+      { id: 9, text: "While kissing this person, put your hand down their pants or up their skirt, but stay above their underwear.", tags: ["Kissing", "Foreplay", "Touching"], heatLevel: "🔥", category: "Touching" },
+      { id: 10, text: "Pick someone of the opposite sex (not your partner) and whisper something that you'd really like to do sexually to them.", tags: ["Foreplay"], heatLevel: "🔥", category: "Foreplay" },
+      { id: 11, text: "Take the hand of this person and lay a trail of soft kisses from their wrist to their neck.", tags: ["Kissing"], heatLevel: "🔥", category: "Kissing" },
+      
+      // Level 2 Cards  
+      { id: 12, text: "Close your eyes and keep them closed while everyone takes a turn kissing you with tongue.", tags: ["Kissing", "Group Play", "Blindfold"], heatLevel: "🔥🔥", category: "Group Play" },
+      { id: 13, text: "If you're a girl, rub the chest of a guy (not your partner) under his shirt. If you're a guy, do the same to a girl under her bra.", tags: ["Touching"], heatLevel: "🔥🔥", category: "Touching" },
+      { id: 14, text: "Kiss this person and then use the tip of your tongue to lightly trace the edges of their upper and lower lips.", tags: ["Kissing", "Oral"], heatLevel: "🔥🔥", category: "Kissing" },
+      { id: 15, text: "Sensually suck the index finger of this person.", tags: ["Oral", "Foreplay"], heatLevel: "🔥🔥", category: "Oral" },
+      { id: 16, text: "Pick two people and kiss them both with tongue, going back and forth a couple of times.", tags: ["Kissing", "Group Play"], heatLevel: "🔥🔥", category: "Group Play" },
+      { id: 17, text: "Pick someone, who is not your partner, and make out with them while lying down.", tags: ["Kissing"], heatLevel: "🔥🔥", category: "Kissing" },
+      { id: 18, text: "Starting at the knee, kiss and lick this person's inner thighs, stop when you get to their genital area.", tags: ["Oral", "Foreplay"], heatLevel: "🔥🔥", category: "Oral" },
+      { id: 19, text: "Stand and kiss this person with tongue while putting your hands down the back of their pants.", tags: ["Kissing", "Touching"], heatLevel: "🔥🔥", category: "Touching" },
+      { id: 20, text: "Pick two people and all three of you stand. Rub them both, below the waist simultaneously, while kissing one of them.", tags: ["Group Play", "Touching"], heatLevel: "🔥🔥", category: "Group Play" },
+      
+      // Level 3 Cards
+      { id: 21, text: "If you're a girl, pick a guy that is not your partner. Rub your bare breasts on either side of his penis. If you're a guy, pick a girl that is not your partner and rub your penis between her breasts.", tags: ["Oral", "Group Play"], heatLevel: "🔥🔥🔥", category: "Oral" },
+      { id: 22, text: "Stimulate two parts of this person's body at the same time. Use your hand on one part, and your mouth on another.", tags: ["Touching", "Oral", "Foreplay"], heatLevel: "🔥🔥🔥", category: "Oral" },
+      { id: 23, text: "If you're a guy, kiss both girls while they both stroke your penis. If you're a girl, kiss both guys while they both rub your bare breasts.", tags: ["Group Play", "Oral", "Touching"], heatLevel: "🔥🔥🔥", category: "Group Play" },
+      { id: 24, text: "While standing or lying down, lick whatever body part this person prefers. Do this for one minute.", tags: ["Oral"], heatLevel: "🔥🔥🔥", category: "Oral" },
+      { id: 25, text: "Without removing this person's underwear – just slide them over – give them oral. Do this for one minute.", tags: ["Oral"], heatLevel: "🔥🔥🔥", category: "Oral" },
+      { id: 26, text: "You're the director. Select your cast and have them perform a short porn scene.", tags: ["Roleplay", "Exhibition", "Group Play"], heatLevel: "🔥🔥🔥", category: "Roleplay" },
+      { id: 27, text: "While kissing this person, slip your hand in their underwear and caress erotically.", tags: ["Kissing", "Touching"], heatLevel: "🔥🔥🔥", category: "Touching" },
+      { id: 28, text: "While standing behind this person and kissing their neck, slip your hand down the front of their underwear and caress erotically.", tags: ["Kissing", "Touching"], heatLevel: "🔥🔥🔥", category: "Touching" },
+      { id: 29, text: "You and your partner choose a girl. The guy stands behind her, holding and rubbing her breast, while the girl (his partner) stands in front and sucks her nipples.", tags: ["Group Play", "Oral", "Exhibition"], heatLevel: "🔥🔥🔥", category: "Group Play" },
+      { id: 30, text: "If you're a girl, you're going to suck your partner's penis, but don't use your hands. Pick another person to handle his penis and place it in your mouth. If you're a guy, do this with your partner and someone else.", tags: ["Oral", "Group Play"], heatLevel: "🔥🔥🔥", category: "Group Play" }
+    ]
+
     const iceBreakers: Card[] = [
-      { id: 1, text: "Share a compliment about each person in the group", tags: ["Communication", "Affection"], heatLevel: "Warm", category: "Touching" },
-      { id: 2, text: "Give someone a 30-second shoulder massage", tags: ["Touch", "Massage"], heatLevel: "Warm", category: "Touching" },
-      { id: 3, text: "Share your favorite romantic memory", tags: ["Communication", "Romance"], heatLevel: "Warm", category: "Touching" },
-      { id: 4, text: "Kiss your partner on the forehead", tags: ["Kiss", "Gentle"], heatLevel: "Warm", category: "Kissing" },
-      { id: 5, text: "Hold hands with your partner for 1 minute while maintaining eye contact", tags: ["Touch", "Eye Contact"], heatLevel: "Warm", category: "Touching" }
-    ]
-
-    const hotNHeavyLevel1: Card[] = [
-      { id: 1, text: "Give your partner a sensual shoulder massage for 60 seconds", tags: ["Touch", "Sensual"], heatLevel: "Spicy", category: "Touching" },
-      { id: 2, text: "Kiss your partner passionately for 30 seconds", tags: ["Kiss", "Passionate"], heatLevel: "Spicy", category: "Kissing" },
-      { id: 3, text: "Whisper something seductive in your partner's ear", tags: ["Communication", "Seductive"], heatLevel: "Spicy", category: "Touching" },
-      { id: 4, text: "Give your partner a gentle bite on the neck", tags: ["Touch", "Playful"], heatLevel: "Spicy", category: "Touching" },
-      { id: 5, text: "Trace your finger along your partner's arm slowly", tags: ["Touch", "Teasing"], heatLevel: "Spicy", category: "Touching" }
-    ]
-
-    const hotNHeavyLevel2: Card[] = [
-      { id: 1, text: "Give your partner oral pleasure for 2 minutes", tags: ["Oral", "Pleasure"], heatLevel: "Hot", category: "Oral" },
-      { id: 2, text: "Use your hands to pleasure your partner", tags: ["Touch", "Pleasure"], heatLevel: "Hot", category: "Touching" },
-      { id: 3, text: "Kiss and touch your partner's most sensitive areas", tags: ["Kiss", "Touch", "Intimate"], heatLevel: "Hot", category: "Touching" },
-      { id: 4, text: "Take turns pleasuring each other orally", tags: ["Oral", "Mutual"], heatLevel: "Hot", category: "Oral" },
-      { id: 5, text: "Explore your partner's body with your tongue", tags: ["Oral", "Exploration"], heatLevel: "Hot", category: "Oral" }
-    ]
-
-    const hotNHeavyLevel3: Card[] = [
-      { id: 1, text: "Make love in your favorite position for 5 minutes", tags: ["Penetration", "Intimate"], heatLevel: "Fire", category: "Full Penetration" },
-      { id: 2, text: "Try a new position you've never done before", tags: ["Penetration", "Adventure"], heatLevel: "Fire", category: "Full Penetration" },
-      { id: 3, text: "Make passionate love while maintaining eye contact", tags: ["Penetration", "Connection"], heatLevel: "Fire", category: "Full Penetration" },
-      { id: 4, text: "Explore anal play together", tags: ["Anal", "Exploration"], heatLevel: "Fire", category: "Anal" },
-      { id: 5, text: "Use toys together during intimacy", tags: ["Toys", "Enhancement"], heatLevel: "Fire", category: "Toys" }
+      { id: 1, text: "Share a compliment about each person in the group", tags: ["Communication"], heatLevel: "Warm", category: "Communication" },
+      { id: 2, text: "Give someone a 30-second shoulder massage", tags: ["Touching"], heatLevel: "Warm", category: "Touching" },
+      { id: 3, text: "Share your favorite romantic memory", tags: ["Communication"], heatLevel: "Warm", category: "Communication" },
+      { id: 4, text: "Kiss your partner on the forehead", tags: ["Kissing"], heatLevel: "Warm", category: "Kissing" },
+      { id: 5, text: "Hold hands with your partner for 1 minute while maintaining eye contact", tags: ["Touching"], heatLevel: "Warm", category: "Touching" }
     ]
 
     let selectedCards: Card[] = []
@@ -80,9 +129,11 @@ export default function Game() {
     if (deck === 'IceBreaker') {
       selectedCards = iceBreakers
     } else if (deck === "Hot 'N Heavy") {
-      if (heatLevel === 1) selectedCards = hotNHeavyLevel1
-      else if (heatLevel === 2) selectedCards = [...hotNHeavyLevel1, ...hotNHeavyLevel2]
-      else selectedCards = [...hotNHeavyLevel1, ...hotNHeavyLevel2, ...hotNHeavyLevel3]
+      // Filter by heat level
+      selectedCards = hotNHeavyCards.filter(card => {
+        const cardLevel = card.heatLevel.length // 🔥 = 1, 🔥🔥 = 2, 🔥🔥🔥 = 3
+        return cardLevel <= heatLevel
+      })
     }
 
     // Filter by selected categories

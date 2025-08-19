@@ -157,18 +157,12 @@ export default function Lobby() {
           </div>
         </div>
 
-        {/* Sliding Content */}
-        <div className="w-full relative overflow-hidden mb-4" style={{height: 'calc(100vh - 260px)', minHeight: '350px'}}>
-          <div 
-            className="flex gap-4 transition-transform duration-500 ease-in-out h-full"
-            style={{
-              transform: `translateX(calc(-${(currentStep - 1) * 100}% - ${(currentStep - 1) * 1}rem))`,
-              width: '600%'
-            }}
-          >
+        {/* Content Screens */}
+        <div className="w-full relative mb-4" style={{height: 'calc(100vh - 260px)', minHeight: '350px'}}>
             
             {/* Step 1: Participants */}
-            <div className="w-full flex-shrink-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675'}}>
+            {currentStep === 1 && (
+            <div className="absolute inset-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675'}}>
               <h2 className="text-xl md:text-2xl font-bold font-sans mb-4 text-center" style={{color: '#5b5450'}}>Who&apos;s Playing?</h2>
               
               <div className="space-y-3 mb-4">
@@ -207,9 +201,11 @@ export default function Lobby() {
                 + Add Another Player
               </button>
             </div>
+            )}
 
             {/* Step 2: Deck Selection */}
-            <div className="w-full flex-shrink-0 bg-white rounded-xl p-3 md:p-4 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675'}}>
+            {currentStep === 2 && (
+            <div className="absolute inset-0 bg-white rounded-xl p-3 md:p-4 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675'}}>
               <h2 className="text-lg md:text-xl font-bold font-sans mb-3 text-center" style={{color: '#5b5450'}}>Choose Your Adventure</h2>
               
               <div className="grid grid-cols-2 gap-3 mb-4">
@@ -252,9 +248,11 @@ export default function Lobby() {
                 </div>
               )}
             </div>
+            )}
 
             {/* Step 3: Swap Type & Heat Level */}
-            <div className="w-full flex-shrink-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675'}}>
+            {currentStep === 3 && (
+            <div className="absolute inset-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675'}}>
               <h2 className="text-xl md:text-2xl font-bold font-sans mb-6 text-center" style={{color: '#5b5450'}}>Game Intensity</h2>
               
               <div className="space-y-8">
@@ -306,9 +304,11 @@ export default function Lobby() {
                 </div>
               </div>
             </div>
+            )}
 
             {/* Step 4: Categories */}
-            <div className="w-full flex-shrink-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675'}}>
+            {currentStep === 4 && (
+            <div className="absolute inset-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675'}}>
               <h2 className="text-xl md:text-2xl font-bold font-sans mb-6 text-center" style={{color: '#5b5450'}}>What&apos;s Included?</h2>
               
               <div>
@@ -329,9 +329,11 @@ export default function Lobby() {
                 </div>
               </div>
             </div>
+            )}
 
             {/* Step 5: Time & Game Options */}
-            <div className="w-full flex-shrink-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675'}}>
+            {currentStep === 5 && (
+            <div className="absolute inset-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#468675'}}>
               <h2 className="text-xl md:text-2xl font-bold font-sans mb-6 text-center" style={{color: '#5b5450'}}>Game Options</h2>
               
               <div className="space-y-8">
@@ -385,9 +387,11 @@ export default function Lobby() {
                 </div>
               </div>
             </div>
+            )}
 
             {/* Step 6: Consent & 18+ Disclaimer */}
-            <div className="w-full flex-shrink-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#bb3309'}}>
+            {currentStep === 6 && (
+            <div className="absolute inset-0 bg-white rounded-xl p-4 md:p-6 border-2 shadow-lg overflow-y-auto" style={{borderColor: '#bb3309'}}>
               <h2 className="text-xl md:text-2xl font-bold font-sans mb-6 text-center" style={{color: '#bb3309'}}>Important: Consent & Age Verification</h2>
               
               <div className="space-y-6">
@@ -418,7 +422,7 @@ export default function Lobby() {
                 </div>
               </div>
             </div>
-          </div>
+            )}
         </div>
 
         {/* Navigation Buttons */}

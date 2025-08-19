@@ -1,3 +1,5 @@
+'use client'
+
 export default function Consent() {
   return (
     <div className="viewport-container" style={{backgroundColor: '#f6f3e2'}}>

@@ -107,9 +107,8 @@ export default function Lobby() {
                   value={currentPlayer.name}
                   onChange={(e) => setCurrentPlayer({...currentPlayer, name: e.target.value})}
                   className="w-full px-4 py-4 border-2 border-gray-300 focus:border-tgol-red focus:outline-none text-lg"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
+                  style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor: '#FCF9E8' }}
                   placeholder="Enter player name"
-                  style={{ backgroundColor: '#FCF9E8' }}
                 />
               </div>
 

@@ -84,9 +84,9 @@ export default function Lobby() {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 items-stretch">
           {/* Add Player Form */}
-          <div className="bg-white rounded-2xl shadow-2xl p-8 border-4 border-tgol-red">
+          <div className="bg-white rounded-2xl shadow-2xl p-8 border-4 border-tgol-red h-full">
             <h2 
               className="text-3xl tracking-wide mb-8 text-center"
               style={{ color: '#B9340B', fontFamily: 'Futura, sans-serif', fontWeight: 'bold' }}
@@ -217,7 +217,7 @@ export default function Lobby() {
           </div>
 
           {/* Players List */}
-          <div className="bg-white rounded-2xl shadow-2xl p-8 border-4 border-tgol-green">
+          <div className="bg-white rounded-2xl shadow-2xl p-8 border-4 border-tgol-green h-full">
             <h2 
               className="text-3xl tracking-wide mb-8 text-center"
               style={{ color: '#498379', fontFamily: 'Futura, sans-serif', fontWeight: 'bold' }}

@@ -97,8 +97,7 @@ export default function Home() {
                   className="text-lg font-futura transition-colors"
                   style={{ color: '#555555' }}
                 >
-                  Choose your spice level and activity<br />
-                  preferences for the perfect play.
+                  Tap in, turn up the heat, and let the game take over.
                 </p>
               </div>
             </div>
@@ -117,7 +116,7 @@ export default function Home() {
                   className="text-lg font-futura transition-colors"
                   style={{ color: '#555555' }}
                 >
-                  Get premium physical card sets with beautiful Gil Elvgren-inspired artwork, delivered discreetly.
+                  Bring the heat offline — our decks are made to be held, shared, and explored. Because some things are better in your hands.
                 </p>
               </div>
             </div>

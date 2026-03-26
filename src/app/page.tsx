@@ -83,9 +83,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 mb-16">
-          <Link href="/lobby" className="block">
-            <div className="bg-white rounded-2xl shadow-2xl p-10 border-4 border-tgol-red cursor-pointer transition-all hover:bg-tgol-red hover:bg-opacity-20 hover:text-white">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 mb-16 items-stretch">
+          <Link href="/lobby" className="block h-full">
+            <div className="bg-white rounded-2xl shadow-2xl p-10 border-4 border-tgol-red cursor-pointer transition-all hover:bg-tgol-red hover:bg-opacity-20 hover:text-white h-full">
               <div className="text-center">
                 <h2 
                   className="text-3xl font-futura-bold tracking-wide mb-4 transition-colors"
@@ -103,8 +103,8 @@ export default function Home() {
             </div>
           </Link>
 
-          <a href="https://gameoflifestyle.com" target="_blank" rel="noopener noreferrer" className="block">
-            <div className="bg-white rounded-2xl shadow-2xl p-10 border-4 border-tgol-green cursor-pointer transition-all hover:bg-tgol-green hover:bg-opacity-20 hover:text-white">
+          <a href="https://gameoflifestyle.com" target="_blank" rel="noopener noreferrer" className="block h-full">
+            <div className="bg-white rounded-2xl shadow-2xl p-10 border-4 border-tgol-green cursor-pointer transition-all hover:bg-tgol-green hover:bg-opacity-20 hover:text-white h-full">
               <div className="text-center">
                 <h2 
                   className="text-3xl font-futura-bold tracking-wide mb-4 transition-colors"

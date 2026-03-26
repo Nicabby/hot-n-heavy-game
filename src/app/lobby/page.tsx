@@ -123,8 +123,7 @@ export default function Lobby() {
                   value={currentPlayer.gender}
                   onChange={(e) => setCurrentPlayer({...currentPlayer, gender: e.target.value as 'male' | 'female' | 'other'})}
                   className="w-full px-4 py-4 border-2 border-gray-300 focus:border-tgol-red focus:outline-none text-lg"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  style={{ backgroundColor: '#FCF9E8' }}
+                  style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor: '#FCF9E8' }}
                 >
                   <option value="female">Female</option>
                   <option value="male">Male</option>
@@ -143,8 +142,7 @@ export default function Lobby() {
                   value={currentPlayer.avatar}
                   onChange={(e) => setCurrentPlayer({...currentPlayer, avatar: e.target.value})}
                   className="w-full px-4 py-4 border-2 border-gray-300 focus:border-tgol-red focus:outline-none text-lg"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  style={{ backgroundColor: '#FCF9E8' }}
+                  style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor: '#FCF9E8' }}
                 >
                   {avatarsData
                     .filter(avatar => avatar.gender === currentPlayer.gender || avatar.gender === 'any')
@@ -197,8 +195,7 @@ export default function Lobby() {
                     value={currentPlayer.partner}
                     onChange={(e) => setCurrentPlayer({...currentPlayer, partner: e.target.value})}
                     className="w-full px-4 py-4 border-2 border-gray-300 focus:border-tgol-red focus:outline-none text-lg"
-                    style={{ fontFamily: 'Montserrat, sans-serif' }}
-                    style={{ backgroundColor: '#FCF9E8' }}
+                    style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor: '#FCF9E8' }}
                   >
                     <option value="">No specific partner</option>
                     {players.map(player => (
@@ -212,8 +209,7 @@ export default function Lobby() {
                 onClick={addPlayer}
                 disabled={!currentPlayer.name.trim() || players.length >= 8}
                 className="w-full text-white py-4 px-6 text-lg tracking-wide hover:opacity-90 transition-opacity disabled:bg-gray-300 disabled:cursor-not-allowed"
-                style={{ fontFamily: 'Futura, sans-serif', fontWeight: 'bold' }}
-                style={{ backgroundColor: !currentPlayer.name.trim() || players.length >= 8 ? '#cccccc' : '#B9340B' }}
+                style={{ fontFamily: 'Futura, sans-serif', fontWeight: 'bold', backgroundColor: !currentPlayer.name.trim() || players.length >= 8 ? '#cccccc' : '#B9340B' }}
               >
                 ADD PLAYER ({players.length}/8)
               </button>
@@ -288,8 +284,7 @@ export default function Lobby() {
                 <Link
                   href="/consent"
                   className="block w-full text-white py-5 px-6 text-xl tracking-wide text-center hover:opacity-90 transition-opacity"
-                  style={{ fontFamily: 'Futura, sans-serif', fontWeight: 'bold' }}
-                  style={{ backgroundColor: '#498379' }}
+                  style={{ fontFamily: 'Futura, sans-serif', fontWeight: 'bold', backgroundColor: '#498379' }}
                 >
                   CONTINUE TO CONSENT & PREFERENCES
                 </Link>

@@ -1,0 +1,106 @@
+{
+  "icebreaker": [
+    {
+      "id": "IB-001",
+      "text": "Share your most embarrassing crush story",
+      "tags": ["Conversation"],
+      "level": "Icebreaker",
+      "gender": "any",
+      "repeatable": true
+    },
+    {
+      "id": "IB-002", 
+      "text": "Whisper something naughty in your partner's ear",
+      "tags": ["Teasing"],
+      "level": "Icebreaker",
+      "gender": "any",
+      "repeatable": true
+    },
+    {
+      "id": "IB-003",
+      "text": "Give your partner a 30-second shoulder massage",
+      "tags": ["Massage"],
+      "level": "Icebreaker", 
+      "gender": "any",
+      "repeatable": true
+    }
+  ],
+  "hotAndHeavy": {
+    "L1": [
+      {
+        "id": "HH-L1-001",
+        "text": "Kiss your partner's neck while blindfolded",
+        "tags": ["Kissing", "Blindfolding"],
+        "level": "L1",
+        "gender": "any",
+        "repeatable": true
+      },
+      {
+        "id": "HH-L1-002",
+        "text": "Give your partner a sensual back massage for 2 minutes",
+        "tags": ["Massage", "Sensual Touch"],
+        "level": "L1",
+        "gender": "any", 
+        "repeatable": true
+      },
+      {
+        "id": "HH-L1-003",
+        "text": "Dance seductively for your partner for 30 seconds",
+        "tags": ["Dancing", "Teasing"],
+        "level": "L1",
+        "gender": "any",
+        "repeatable": true
+      }
+    ],
+    "L2": [
+      {
+        "id": "HH-L2-001",
+        "text": "Kiss your partner passionately while they're blindfolded",
+        "tags": ["Kissing", "Blindfolding"],
+        "level": "L2",
+        "gender": "any",
+        "repeatable": true
+      },
+      {
+        "id": "HH-L2-002",
+        "text": "Use an ice cube to trace your partner's lips",
+        "tags": ["Temperature Play", "Teasing"],
+        "level": "L2", 
+        "gender": "any",
+        "repeatable": true
+      }
+    ],
+    "L3": [
+      {
+        "id": "HH-L3-001",
+        "text": "Give your partner a full body massage with oil",
+        "tags": ["Massage", "Sensual Touch"],
+        "level": "L3",
+        "gender": "any",
+        "repeatable": true
+      }
+    ]
+  },
+  "extraHot": {
+    "L4": [
+      {
+        "id": "EH-L4-001",
+        "text": "Role play as strangers meeting for the first time",
+        "tags": ["Roleplay", "Power Play"],
+        "level": "L4",
+        "gender": "any",
+        "repeatable": true
+      }
+    ],
+    "L5": [
+      {
+        "id": "EH-L5-001",
+        "text": "Take complete control for the next 10 minutes",
+        "tags": ["Power Play"],
+        "level": "L5", 
+        "gender": "any",
+        "repeatable": true
+      }
+    ]
+  }
+}

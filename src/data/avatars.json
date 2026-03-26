@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ava1",
+    "name": "Sassy Sue",
+    "gender": "female",
+    "image": "/avatars/sue.png",
+    "animations": ["wink", "o-mouth"]
+  },
+  {
+    "id": "ava2",
+    "name": "Flirty Fred",
+    "gender": "male",
+    "image": "/avatars/fred.png",
+    "animations": ["wink"]
+  },
+  {
+    "id": "ava3",
+    "name": "Bombshell Betty",
+    "gender": "female",
+    "image": "/avatars/betty.png",
+    "animations": ["wink", "kiss", "giggle"]
+  },
+  {
+    "id": "ava4",
+    "name": "Charming Charlie",
+    "gender": "male",
+    "image": "/avatars/charlie.png",
+    "animations": ["wink", "smile"]
+  },
+  {
+    "id": "ava5",
+    "name": "Ravishing Ruby",
+    "gender": "female",
+    "image": "/avatars/ruby.png",
+    "animations": ["wink", "o-mouth", "blush"]
+  },
+  {
+    "id": "ava6",
+    "name": "Dapper Dan",
+    "gender": "male",
+    "image": "/avatars/dan.png",
+    "animations": ["wink", "tip-hat"]
+  }
+]

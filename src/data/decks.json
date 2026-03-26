@@ -1,106 +1,109 @@
 {
   "icebreaker": [
-    {
-      "id": "IB-001",
-      "text": "Share your most embarrassing crush story",
-      "tags": ["Conversation"],
-      "level": "Icebreaker",
-      "gender": "any",
-      "repeatable": true
-    },
-    {
-      "id": "IB-002", 
-      "text": "Whisper something naughty in your partner's ear",
-      "tags": ["Teasing"],
-      "level": "Icebreaker",
-      "gender": "any",
-      "repeatable": true
-    },
-    {
-      "id": "IB-003",
-      "text": "Give your partner a 30-second shoulder massage",
-      "tags": ["Massage"],
-      "level": "Icebreaker", 
-      "gender": "any",
-      "repeatable": true
-    }
+    { "id": "IB-001", "text": "When do you prefer to have sex: in the morning, during the day, or at night?", "tags": ["Discussion", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-002", "text": "If you could have sex with a celebrity, whom would you choose?", "tags": ["Discussion", "Fantasy"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-003", "text": "Have you ever had sex in a pool or hot tub?", "tags": ["Discussion", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-004", "text": "Do tattoos or piercings turn you on? If so, where do you like them most? How do you feel about genital piercings?", "tags": ["Discussion", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-005", "text": "Have you ever engaged in role play? If not, would you? What would your role play fantasy be?", "tags": ["Discussion", "Roleplay", "Fantasy"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-006", "text": "Do you enjoy dirty talk during sex? If so, how dirty? Mild or downright raunchy? Do you prefer to say it or hear it?", "tags": ["Discussion", "Dirty Talk"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-007", "text": "Name two places, outside the house, where you would like to have sex?", "tags": ["Discussion", "Fantasy", "Public"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-008", "text": "What clothing worn by someone else do you think is sexy?", "tags": ["Discussion", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-009", "text": "Have you ever taken a nude photo or made a sex video? If not, would you?", "tags": ["Discussion", "Exhibition"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-010", "text": "Have you ever had sex with someone more than 10 years older or younger than you?", "tags": ["Discussion", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-011", "text": "How many times a week do you have sex? How many times would you like to have it? How often do you think about sex?", "tags": ["Discussion", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-012", "text": "What's your favorite body part on someone else?", "tags": ["Discussion", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-013", "text": "Other than the typical erogenous zones, name an area on your body that is really sensitive.", "tags": ["Discussion", "Preferences", "Body"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-014", "text": "Have you sexted or had video or phone sex? Tell your story.", "tags": ["Discussion", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-015", "text": "Do you prefer to be on top or the bottom?", "tags": ["Discussion", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-016", "text": "Describe your sexual fantasy in as much detail as possible.", "tags": ["Discussion", "Fantasy"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-017", "text": "Have you been to a lifestyle resort? If not, would you go to one?", "tags": ["Discussion", "Lifestyle", "Group Play"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-018", "text": "What is something you can say or do to your partner to turn him/her on?", "tags": ["Discussion", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-019", "text": "What is your favorite sexual position? Is it the position you use most often? If not, what is?", "tags": ["Discussion", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-020", "text": "Have you ever had anal sex? If yes, do you enjoy it? If no, would you?", "tags": ["Discussion", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-021", "text": "If you could only have one type of sex for the rest of your life would it be regular intercourse, oral, or anal?", "tags": ["Discussion", "Preferences", "Oral"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-022", "text": "Have you ever used food as a prop during sex? If so, what was it and how did you use it?", "tags": ["Discussion", "Roleplay"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-023", "text": "When you orgasm, are you quiet or loud? Do you get turned on when your partner makes a lot of noise?", "tags": ["Discussion", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-024", "text": "Is there anything that makes you lose your inhibitions or really horny?", "tags": ["Discussion", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-025", "text": "When was the last time you pleasured yourself alone, without your partner?", "tags": ["Discussion", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-026", "text": "Would you enjoy watching your partner masturbate? How about if he/she didn't know you were watching?", "tags": ["Discussion", "Voyeurism"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-027", "text": "Have you ever had sex with your partner while at someone else's house?", "tags": ["Discussion", "Lifestyle", "Public"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-028", "text": "Is there something sexual that you used to think was vulgar but now have changed your opinion on?", "tags": ["Discussion", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-029", "text": "Would you rather give or receive oral sex?", "tags": ["Discussion", "Oral", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-030", "text": "Voyeur or exhibitionist? Would you rather have sex in front of someone or watch someone having sex?", "tags": ["Discussion", "Voyeurism", "Exhibition"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-031", "text": "You meet another couple at a lifestyle event, but unlike your partner, you don't find them attractive. Would you tell your partner or not say anything and 'take one for the team'?", "tags": ["Discussion", "Lifestyle", "Group Play"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-032", "text": "Do you like to be spanked? Are you into dominance/submission play of any sort during sex?", "tags": ["Discussion", "BDSM", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-033", "text": "Do you like to be gently tied up? What about blindfolded?", "tags": ["Discussion", "Blindfolding", "BDSM"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-034", "text": "Have you ever had oral sex while driving? If not, would you?", "tags": ["Discussion", "Oral", "Public"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-035", "text": "Do you watch porn? If so, what kind? Have you watched porn with your partner? Do you watch a different kind of porn when you're together?", "tags": ["Discussion", "Voyeurism"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-036", "text": "Name a TV show or movie that you would like to watch if the entire cast was naked?", "tags": ["Discussion", "Fantasy"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-037", "text": "What is the craziest position or sexual thing you've ever tried?", "tags": ["Discussion", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-038", "text": "Have you ever been in an orgy? If not, would you want to?", "tags": ["Discussion", "Group Play", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-039", "text": "What is the sexiest thing your partner could wear? Girls, do you enjoy wearing sexy lingerie? Guys, do you enjoy seeing your partner in lingerie?", "tags": ["Discussion", "Preferences", "Exhibition"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-040", "text": "What is the most orgasmic thing your partner does to you?", "tags": ["Discussion", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-041", "text": "In any 24hr period, what is the most you've had sex? How many times could you have sex in a day? What about a week?", "tags": ["Discussion", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-042", "text": "Have you and your partner been to a strip club together? If not, would you? If so, did either of you get a lap dance?", "tags": ["Discussion", "Voyeurism", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-043", "text": "Would you rather watch your partner have a threesome with another couple or have your partner watch you?", "tags": ["Discussion", "Voyeurism", "Group Play"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-044", "text": "Have you ever had sex in a public or semi-public place? If yes, where? If not, would you want to and where?", "tags": ["Discussion", "Public", "Exhibition"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-045", "text": "Have you ever done anything sexual with someone of the same sex? If not, do you want to?", "tags": ["Discussion", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-046", "text": "Where do you or where does your partner like to finish — on or inside you? If on, where?", "tags": ["Discussion", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-047", "text": "Do you enjoy sex in either the bath or shower?", "tags": ["Discussion", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-048", "text": "Do you enjoy using sex toys on either yourself or your partner? If yes, what kind? Is there any toy you're interested in trying but haven't?", "tags": ["Discussion", "Preferences", "Toys"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-049", "text": "What turns you off?", "tags": ["Discussion", "Preferences"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-050", "text": "Have you ever read an erotic story? Have you ever read one to your partner aloud?", "tags": ["Discussion", "Roleplay"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-051", "text": "Have you ever had sex with someone from a different ethnic background?", "tags": ["Discussion", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-052", "text": "Prior to meeting your partner, have you ever had a threesome?", "tags": ["Discussion", "Group Play", "Lifestyle"], "level": "Icebreaker", "gender": "any", "repeatable": true },
+    { "id": "IB-053", "text": "Is there an occupation that you find sexy? E.g. firefighter, nurse.", "tags": ["Discussion", "Fantasy", "Roleplay"], "level": "Icebreaker", "gender": "any", "repeatable": true }
   ],
   "hotAndHeavy": {
     "L1": [
-      {
-        "id": "HH-L1-001",
-        "text": "Kiss your partner's neck while blindfolded",
-        "tags": ["Kissing", "Blindfolding"],
-        "level": "L1",
-        "gender": "any",
-        "repeatable": true
-      },
-      {
-        "id": "HH-L1-002",
-        "text": "Give your partner a sensual back massage for 2 minutes",
-        "tags": ["Massage", "Sensual Touch"],
-        "level": "L1",
-        "gender": "any", 
-        "repeatable": true
-      },
-      {
-        "id": "HH-L1-003",
-        "text": "Dance seductively for your partner for 30 seconds",
-        "tags": ["Dancing", "Teasing"],
-        "level": "L1",
-        "gender": "any",
-        "repeatable": true
-      }
+      { "id": "HH-L1-001", "text": "Pick someone who is not your partner and kiss them softly on the lips.", "tags": ["Kissing"], "level": "L1", "gender": "any", "repeatable": true },
+      { "id": "HH-L1-002", "text": "Pick two people and have them passionately kiss each other.", "tags": ["Kissing", "Voyeurism", "Group Play"], "level": "L1", "gender": "any", "repeatable": true },
+      { "id": "HH-L1-003", "text": "Pick someone who is not your partner and kiss them with tongue.", "tags": ["Kissing"], "level": "L1", "gender": "any", "repeatable": true },
+      { "id": "HH-L1-004", "text": "Sensually kiss this person in three different places other than their lips.", "tags": ["Kissing", "Foreplay"], "level": "L1", "gender": "any", "repeatable": true },
+      { "id": "HH-L1-005", "text": "Nibble the person's ear until they moan or giggle.", "tags": ["Kissing", "Teasing"], "level": "L1", "gender": "any", "repeatable": true },
+      { "id": "HH-L1-006", "text": "Remove one article of your own clothing.", "tags": ["Strip", "Exhibition"], "level": "L1", "gender": "any", "repeatable": true },
+      { "id": "HH-L1-007", "text": "Help this person remove one article of clothing.", "tags": ["Strip", "Foreplay"], "level": "L1", "gender": "any", "repeatable": true },
+      { "id": "HH-L1-008", "text": "Softly kiss this person's neck and collar bone.", "tags": ["Kissing", "Neck Play"], "level": "L1", "gender": "any", "repeatable": true },
+      { "id": "HH-L1-009", "text": "While kissing this person, take their hand and guide it to a place you want them to rub.", "tags": ["Kissing", "Touch", "Guided"], "level": "L1", "gender": "any", "repeatable": true },
+      { "id": "HH-L1-010", "text": "While kissing this person, feel their chest under their shirt. If they're a girl, stay above the bra.", "tags": ["Kissing", "Touch", "Teasing"], "level": "L1", "gender": "any", "repeatable": true },
+      { "id": "HH-L1-011", "text": "While kissing this person, put your hand down their pants or up their skirt, but stay above their underwear.", "tags": ["Kissing", "Touch", "Teasing"], "level": "L1", "gender": "any", "repeatable": true },
+      { "id": "HH-L1-012", "text": "Pick someone of the opposite sex (not your partner) and whisper something that you'd really like to do sexually to them.", "tags": ["Dirty Talk", "Fantasy"], "level": "L1", "gender": "any", "repeatable": true },
+      { "id": "HH-L1-013", "text": "Take the hand of this person and lay a trail of soft kisses from their wrist to their neck.", "tags": ["Kissing", "Sensual"], "level": "L1", "gender": "any", "repeatable": true }
     ],
     "L2": [
-      {
-        "id": "HH-L2-001",
-        "text": "Kiss your partner passionately while they're blindfolded",
-        "tags": ["Kissing", "Blindfolding"],
-        "level": "L2",
-        "gender": "any",
-        "repeatable": true
-      },
-      {
-        "id": "HH-L2-002",
-        "text": "Use an ice cube to trace your partner's lips",
-        "tags": ["Temperature Play", "Teasing"],
-        "level": "L2", 
-        "gender": "any",
-        "repeatable": true
-      }
+      { "id": "HH-L2-001", "text": "Close your eyes and keep them closed while everyone takes a turn kissing you with tongue.", "tags": ["Kissing", "Group Play", "Blindfolding"], "level": "L2", "gender": "any", "repeatable": true },
+      { "id": "HH-L2-002", "text": "If you're a girl, rub the chest of a guy (not your partner) under his shirt. If you're a guy, do the same thing to a girl, under her bra.", "tags": ["Touch", "Teasing", "Nipple Play"], "level": "L2", "gender": "any", "repeatable": true },
+      { "id": "HH-L2-003", "text": "Kiss this person and then use the tip of your tongue to lightly trace the edges of their upper and lower lips.", "tags": ["Kissing", "Teasing", "Tongue"], "level": "L2", "gender": "any", "repeatable": true },
+      { "id": "HH-L2-004", "text": "Sensually suck the index finger of this person.", "tags": ["Oral", "Teasing", "Foreplay"], "level": "L2", "gender": "any", "repeatable": true },
+      { "id": "HH-L2-005", "text": "If you're a girl, take the other girl's hand and place it on your partner's penis and help her rub it (above the underwear). If you're a guy, take your partner's hand and do the same thing to the other girl's vagina.", "tags": ["Touch", "Group Play", "Teasing"], "level": "L2", "gender": "any", "repeatable": true },
+      { "id": "HH-L2-006", "text": "Pick two people and kiss them both with tongue, going back and forth a couple of times.", "tags": ["Kissing", "Group Play"], "level": "L2", "gender": "any", "repeatable": true },
+      { "id": "HH-L2-007", "text": "If you're a girl, rub two guy's penises at the same time, above their underwear. If you're a guy, rub two girl's vaginas at the same time, above their underwear.", "tags": ["Touch", "Group Play", "Teasing"], "level": "L2", "gender": "any", "repeatable": true },
+      { "id": "HH-L2-008", "text": "Pick someone, who is not your partner, and make out with them while lying down.", "tags": ["Kissing", "Foreplay"], "level": "L2", "gender": "any", "repeatable": true },
+      { "id": "HH-L2-009", "text": "Starting at the knee, kiss and lick this person's inner thighs, stop when you get to their genital area. If they're wearing pants, remove them first.", "tags": ["Oral", "Teasing", "Kissing"], "level": "L2", "gender": "any", "repeatable": true },
+      { "id": "HH-L2-010", "text": "Stand and kiss this person with tongue while putting your hands down the back of their pants.", "tags": ["Kissing", "Touch", "Teasing"], "level": "L2", "gender": "any", "repeatable": true },
+      { "id": "HH-L2-011", "text": "Pick two people and all three of you stand. Rub them both, below the waist simultaneously, while kissing one of them.", "tags": ["Touch", "Group Play", "Kissing"], "level": "L2", "gender": "any", "repeatable": true },
+      { "id": "HH-L2-012", "text": "If you're a girl, rub two guy's penises at the same time, under their underwear. If you're a guy, rub two girl's vaginas at the same time, under their underwear.", "tags": ["Touch", "Group Play"], "level": "L2", "gender": "any", "repeatable": true }
     ],
     "L3": [
-      {
-        "id": "HH-L3-001",
-        "text": "Give your partner a full body massage with oil",
-        "tags": ["Massage", "Sensual Touch"],
-        "level": "L3",
-        "gender": "any",
-        "repeatable": true
-      }
+      { "id": "HH-L3-001", "text": "If you're a girl, pick a guy that is not your partner. Rub your bare breasts on either side of his penis. If you're a guy, pick a girl that is not your partner and rub your penis between her breasts.", "tags": ["Nipple Play", "Group Play", "Foreplay"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-002", "text": "Stimulate two parts of this person's body at the same time. Use your hand on one part, and your mouth on another.", "tags": ["Oral", "Touch", "Foreplay"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-003", "text": "If you're a guy, kiss both girls while they both stroke your penis. If you're a girl, kiss both guys while they both rub your bare breasts.", "tags": ["Kissing", "Group Play", "Nipple Play"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-004", "text": "While standing or lying down, lick whatever body part this person prefers. Do this for one minute.", "tags": ["Oral", "Foreplay"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-005", "text": "Without removing this person's underwear — just slide them over — give them oral. Do this for one minute.", "tags": ["Oral", "Teasing"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-006", "text": "If you're a girl, kiss another girl passionately while stroking your partner's penis. If you're a guy, have your partner stroke your penis while you kiss another girl.", "tags": ["Kissing", "Group Play", "Touch"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-007", "text": "You're the director. Select your cast and have them perform a short porn scene.", "tags": ["Roleplay", "Group Play", "Voyeurism"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-008", "text": "While kissing this person, slip your hand in their underwear and caress erotically.", "tags": ["Kissing", "Touch", "Foreplay"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-009", "text": "While standing behind this person and kissing their neck, slip your hand down the front of their underwear and caress erotically.", "tags": ["Kissing", "Neck Play", "Touch"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-010", "text": "You and your partner choose a girl. The guy stands behind her, holding and rubbing her breast, while the girl (his partner) stands in front and sucks her nipples.", "tags": ["Nipple Play", "Group Play", "Oral"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-011", "text": "You and your partner lie down with the other girl. Together, suck her nipples and touch her vagina, at the same time.", "tags": ["Nipple Play", "Group Play", "Touch"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-012", "text": "If you're a girl, you're going to suck your partner's penis, but don't use your hands. Pick another person to handle his penis and place it in your mouth. If you're a guy, do this with your partner and someone else.", "tags": ["Oral", "Group Play"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-013", "text": "If you're a girl, remove your shirt/bra if it's still on, and close your eyes. Two guys now rub their penises on your breasts. If you're a guy, close your eyes while the girls lick your nipples.", "tags": ["Nipple Play", "Group Play", "Blindfolding"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-014", "text": "If you're a girl, lie down and kiss your partner while the other girl runs her tongue all over your body. If you're a guy, do this with your partner and other girl.", "tags": ["Oral", "Group Play", "Kissing"], "level": "L3", "gender": "any", "repeatable": true },
+      { "id": "HH-L3-015", "text": "If you're a girl, lie down with the other girl in the missionary position. You be on top. While kissing her, have your partner finger you and the other girl. If you're a guy, do this with your partner and other girl.", "tags": ["Group Play", "Touch", "Kissing"], "level": "L3", "gender": "any", "repeatable": true }
     ]
   },
   "extraHot": {
-    "L4": [
-      {
-        "id": "EH-L4-001",
-        "text": "Role play as strangers meeting for the first time",
-        "tags": ["Roleplay", "Power Play"],
-        "level": "L4",
-        "gender": "any",
-        "repeatable": true
-      }
-    ],
-    "L5": [
-      {
-        "id": "EH-L5-001",
-        "text": "Take complete control for the next 10 minutes",
-        "tags": ["Power Play"],
-        "level": "L5", 
-        "gender": "any",
-        "repeatable": true
-      }
-    ]
+    "L4": [],
+    "L5": []
   }
 }

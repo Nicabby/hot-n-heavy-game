@@ -31,20 +31,14 @@ module.exports = {
         },
       },
       fontFamily: {
-        // Primary Typography - Futura Std Family
-        futura: ['Futura Std', 'Arial', 'sans-serif'],
-        'futura-bold': ['Futura Std Bold Condensed', 'Arial Black', 'sans-serif'],
-        'futura-medium': ['Futura Std Medium', 'Arial', 'sans-serif'],
-        'futura-book': ['Futura Std Book', 'Arial', 'sans-serif'],
-        
-        // Secondary Typography - Mission Script for logos
+        // Futura Std — headings, display, card text (Jost = closest Google Font fallback)
+        futura: ['Futura Std', 'Futura', 'Jost', 'Arial', 'sans-serif'],
+        'futura-bold': ['Futura Std Bold Condensed', 'Futura', 'Jost', 'Arial Black', 'sans-serif'],
+        'futura-medium': ['Futura Std Medium', 'Futura', 'Jost', 'Arial', 'sans-serif'],
+        'futura-book': ['Futura Std Book', 'Futura', 'Jost', 'Arial', 'sans-serif'],
+
+        // Mission Script — logo accent (Dancing Script = closest Google Font fallback)
         mission: ['Mission Script', 'Dancing Script', 'cursive'],
-        
-        // Website Typography - Avenir (fallback to system fonts)
-        avenir: ['Avenir', 'system-ui', 'sans-serif'],
-        'avenir-medium': ['Avenir Medium Condensed', 'system-ui', 'sans-serif'],
-      },
-    },
-  },
-  plugins: [],
-}
+
+        // Avenir — primary website body font (Nunito = closest Google Font fallback)
+        avenir: ['Ave

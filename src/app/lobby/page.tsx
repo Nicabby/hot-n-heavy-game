@@ -56,14 +56,14 @@ export default function Lobby() {
           <button
             onClick={() => router.push('/')}
             className="inline-flex items-center hover:opacity-70 transition-opacity mb-3"
-            style={{ color: '#B9340B', fontSize: '12pt', fontFamily: 'Montserrat, sans-serif' }}
+            style={{ color: '#B9340B', fontSize: '12pt', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}
           >
             ← Back to home
           </button>
           <h1 className="text-4xl font-futura-bold tracking-wide mb-2" style={{ color: '#B9340B' }}>
             Game Set-Up
           </h1>
-          <p className="text-xl" style={{ color: '#555555', fontFamily: 'Montserrat, sans-serif' }}>
+          <p className="text-xl" style={{ color: '#555555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
             Add players and configure your game preferences.
           </p>
         </div>
@@ -79,7 +79,7 @@ export default function Lobby() {
             <div className="space-y-4">
               <div>
                 <label className="block text-lg mb-3"
-                  style={{ color: '#555555', fontFamily: 'Montserrat, sans-serif', fontWeight: '500' }}>
+                  style={{ color: '#555555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif', fontWeight: '500' }}>
                   Player Name
                 </label>
                 <input
@@ -88,14 +88,14 @@ export default function Lobby() {
                   onChange={(e) => setCurrentPlayer({ ...currentPlayer, name: e.target.value })}
                   onKeyDown={(e) => e.key === 'Enter' && addPlayer()}
                   className="w-full px-4 py-4 border-2 border-gray-300 focus:border-tgol-red focus:outline-none text-lg"
-                  style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor: '#FCF9E8' }}
+                  style={{ fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif', backgroundColor: '#FCF9E8' }}
                   placeholder="Enter player name"
                 />
               </div>
 
               <div>
                 <label className="block text-lg mb-3"
-                  style={{ color: '#555555', fontFamily: 'Montserrat, sans-serif', fontWeight: '500' }}>
+                  style={{ color: '#555555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif', fontWeight: '500' }}>
                   Gender
                 </label>
                 <select
@@ -106,7 +106,7 @@ export default function Lobby() {
                     setCurrentPlayer({ ...currentPlayer, gender: g, avatar: firstMatch?.id || avatarsData[0].id })
                   }}
                   className="w-full px-4 py-4 border-2 border-gray-300 focus:border-tgol-red focus:outline-none text-lg"
-                  style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor: '#FCF9E8' }}
+                  style={{ fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif', backgroundColor: '#FCF9E8' }}
                 >
                   <option value="female">Female</option>
                   <option value="male">Male</option>
@@ -116,7 +116,7 @@ export default function Lobby() {
 
               <div>
                 <label className="block text-lg mb-3"
-                  style={{ color: '#555555', fontFamily: 'Montserrat, sans-serif', fontWeight: '500' }}>
+                  style={{ color: '#555555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif', fontWeight: '500' }}>
                   Avatar Character
                 </label>
                 <div className="grid grid-cols-4 gap-3">
@@ -134,7 +134,7 @@ export default function Lobby() {
                         <Image src={avatar.image} alt={avatar.name} width={64} height={64}
                           className="rounded-lg object-cover w-full aspect-square" />
                         <span className="text-xs mt-1 text-center leading-tight"
-                          style={{ color: '#555555', fontFamily: 'Montserrat, sans-serif' }}>
+                          style={{ color: '#555555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                           {avatar.name.split(' ')[0]}
                         </span>
                       </button>
@@ -144,7 +144,7 @@ export default function Lobby() {
 
               <div>
                 <label className="block text-lg mb-3"
-                  style={{ color: '#555555', fontFamily: 'Montserrat, sans-serif', fontWeight: '500' }}>
+                  style={{ color: '#555555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif', fontWeight: '500' }}>
                   Spice Level: L{currentPlayer.spiceLevel}
                 </label>
                 <input type="range" min="1" max="5" value={currentPlayer.spiceLevel}
@@ -153,7 +153,7 @@ export default function Lobby() {
                   style={{ background: 'linear-gradient(to right, #498379 0%, #B9340B 100%)', borderRadius: '6px' }}
                 />
                 <div className="flex justify-between text-sm mt-2"
-                  style={{ color: '#555555', fontFamily: 'Montserrat, sans-serif' }}>
+                  style={{ color: '#555555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                   <span>MILD</span><span>WARM</span><span>SPICY</span><span>HOT</span><span>EXTRA HOT</span>
                 </div>
               </div>
@@ -161,13 +161,13 @@ export default function Lobby() {
               {players.length > 0 && (
                 <div>
                   <label className="block text-lg mb-3"
-                    style={{ color: '#555555', fontFamily: 'Montserrat, sans-serif', fontWeight: '500' }}>
+                    style={{ color: '#555555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif', fontWeight: '500' }}>
                     Partner (Optional)
                   </label>
                   <select value={currentPlayer.partner}
                     onChange={(e) => setCurrentPlayer({ ...currentPlayer, partner: e.target.value })}
                     className="w-full px-4 py-4 border-2 border-gray-300 focus:border-tgol-red focus:outline-none text-lg"
-                    style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor: '#FCF9E8' }}>
+                    style={{ fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif', backgroundColor: '#FCF9E8' }}>
                     <option value="">No specific partner</option>
                     {players.map(player => (
                       <option key={player.id} value={player.id}>{player.name}</option>
@@ -197,7 +197,7 @@ export default function Lobby() {
 
             {players.length === 0 ? (
               <p className="text-center py-12 text-lg"
-                style={{ color: '#555555', fontFamily: 'Montserrat, sans-serif' }}>
+                style={{ color: '#555555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                 No players added yet
               </p>
             ) : (
@@ -225,7 +225,7 @@ export default function Lobby() {
                             style={{ color: '#555555', fontFamily: 'Futura, sans-serif', fontWeight: 'bold' }}>
                             {player.name}
                           </h3>
-                          <p style={{ color: '#555555', fontFamily: 'Montserrat, sans-serif' }}>
+                          <p style={{ color: '#555555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                             {avatar?.name} · L{player.spiceLevel}
                             {partner && ` · Partner: ${partner.name}`}
                           </p>

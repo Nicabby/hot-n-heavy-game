@@ -52,7 +52,7 @@ export default function Results() {
 
           <div className="mb-12">
             <h1 className="text-5xl font-futura-bold tracking-wide mb-4" style={{ color: '#B9340B' }}>GAME COMPLETE!</h1>
-            <p className="text-2xl" style={{ color: '#498379', fontFamily: 'Montserrat, sans-serif' }}>Hope you had a spicy time! 🔥</p>
+            <p className="text-2xl" style={{ color: '#498379', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>Hope you had a spicy time! 🔥</p>
           </div>
 
           {/* Stats */}
@@ -68,7 +68,7 @@ export default function Results() {
                 <div key={stat.label} className="rounded-xl p-4" style={{ backgroundColor: '#FCF9E8' }}>
                   <div className="text-3xl mb-2">{stat.emoji}</div>
                   <div className="text-2xl font-bold" style={{ color: stat.color }}>{stat.value}</div>
-                  <div className="text-sm" style={{ color: '#888', fontFamily: 'Montserrat, sans-serif' }}>{stat.label}</div>
+                  <div className="text-sm" style={{ color: '#888', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -84,8 +84,8 @@ export default function Results() {
                     <div className="flex items-center space-x-3">
                       <span className="text-2xl">{a.emoji}</span>
                       <div className="text-left">
-                        <h3 className="font-bold" style={{ color: '#333', fontFamily: 'Montserrat, sans-serif' }}>{a.name}</h3>
-                        <p className="text-sm" style={{ color: '#666', fontFamily: 'Montserrat, sans-serif' }}>{a.description}</p>
+                        <h3 className="font-bold" style={{ color: '#333', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>{a.name}</h3>
+                        <p className="text-sm" style={{ color: '#666', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>{a.description}</p>
                       </div>
                     </div>
                   </div>
@@ -100,7 +100,7 @@ export default function Results() {
             {!submitted ? (
               <div className="space-y-6">
                 <div>
-                  <p className="mb-4" style={{ color: '#555', fontFamily: 'Montserrat, sans-serif' }}>Rate your session:</p>
+                  <p className="mb-4" style={{ color: '#555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>Rate your session:</p>
                   <div className="flex justify-center space-x-2">
                     {[1, 2, 3, 4, 5].map(star => (
                       <button key={star} onClick={() => setRating(star)}
@@ -110,12 +110,12 @@ export default function Results() {
                   </div>
                 </div>
                 <div>
-                  <p className="mb-2 text-left" style={{ color: '#555', fontFamily: 'Montserrat, sans-serif' }}>
+                  <p className="mb-2 text-left" style={{ color: '#555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                     Any feedback or suggestions?
                   </p>
                   <textarea value={feedback} onChange={(e) => setFeedback(e.target.value)} rows={3}
                     className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-tgol-red focus:outline-none resize-none"
-                    style={{ fontFamily: 'Montserrat, sans-serif', backgroundColor: '#FCF9E8' }}
+                    style={{ fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif', backgroundColor: '#FCF9E8' }}
                     placeholder="Tell us what you loved or how we can improve..." />
                 </div>
                 <button onClick={() => setSubmitted(true)} disabled={rating === 0}
@@ -128,7 +128,7 @@ export default function Results() {
               <div className="text-center py-8">
                 <div className="text-4xl mb-4">🙏</div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#B9340B', fontFamily: 'Futura, sans-serif' }}>Thank You!</h3>
-                <p style={{ color: '#666', fontFamily: 'Montserrat, sans-serif' }}>Your feedback helps us make TGOL even better</p>
+                <p style={{ color: '#666', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>Your feedback helps us make TGOL even better</p>
               </div>
             )}
           </div>
@@ -147,7 +147,7 @@ export default function Results() {
             </button>
             <button onClick={() => router.push('/')}
               className="block py-2 w-full hover:opacity-70 transition-opacity"
-              style={{ color: '#888', fontFamily: 'Montserrat, sans-serif' }}>
+              style={{ color: '#888', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
               Back to Home
             </button>
           </div>

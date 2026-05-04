@@ -91,7 +91,7 @@ function UpgradeModal({ onClose }: { onClose: () => void }) {
         <div className="text-center">
           <div className="text-5xl mb-3">🌶️</div>
           <h3 className="text-2xl font-futura-bold mb-2" style={{ color: '#7b0000' }}>Extra Hot — Locked</h3>
-          <p className="mb-6 text-sm leading-relaxed" style={{ color: '#555', fontFamily: 'Montserrat, sans-serif' }}>
+          <p className="mb-6 text-sm leading-relaxed" style={{ color: '#555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
             L4 and L5 are part of the <strong>Extra Hot expansion pack</strong>.
             Unlock the digital version or grab the physical cards at our store.
           </p>
@@ -106,7 +106,7 @@ function UpgradeModal({ onClose }: { onClose: () => void }) {
             🛍️ Buy Physical Cards
           </a>
           <button onClick={onClose} className="text-sm hover:opacity-70 transition-opacity"
-            style={{ color: '#888', fontFamily: 'Montserrat, sans-serif' }}>
+            style={{ color: '#888', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
             Stay at current level
           </button>
         </div>
@@ -153,7 +153,7 @@ function ExpansionOffer({ onKeepPlaying, onEndGame }: ExpansionOfferProps) {
           <h2 className="text-4xl font-futura-bold tracking-wide mb-3" style={{ color: '#B9340B' }}>
             DECK COMPLETE!
           </h2>
-          <p className="text-lg" style={{ color: '#498379', fontFamily: 'Montserrat, sans-serif' }}>
+          <p className="text-lg" style={{ color: '#498379', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
             You&apos;ve played through every IceBreaker &amp; Hot &apos;n Heavy card.
             <br />
             <strong>Ready to turn up the heat even more?</strong>
@@ -172,13 +172,13 @@ function ExpansionOffer({ onKeepPlaying, onEndGame }: ExpansionOfferProps) {
                   <h3 className="font-bold text-lg leading-tight" style={{ fontFamily: 'Futura, sans-serif' }}>
                     {exp.name}
                   </h3>
-                  <span className="text-xs opacity-90" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  <span className="text-xs opacity-90" style={{ fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                     {exp.level}
                   </span>
                 </div>
               </div>
               <div className="p-4">
-                <p className="text-sm mb-4" style={{ color: '#555', fontFamily: 'Montserrat, sans-serif' }}>
+                <p className="text-sm mb-4" style={{ color: '#555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                   {exp.description}
                 </p>
                 <div className="flex gap-2">
@@ -207,7 +207,7 @@ function ExpansionOffer({ onKeepPlaying, onEndGame }: ExpansionOfferProps) {
           </button>
           <button onClick={onEndGame}
             className="block w-full py-3 hover:opacity-70 transition-opacity text-sm"
-            style={{ color: '#888', fontFamily: 'Montserrat, sans-serif' }}>
+            style={{ color: '#888', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
             See results &amp; end game →
           </button>
         </div>
@@ -381,7 +381,7 @@ export default function Game() {
             <div className="text-center">
               <div className="text-6xl mb-4">🔥</div>
               <h2 className="text-3xl font-futura-bold mb-2" style={{ color: '#B9340B' }}>Heat Check-In</h2>
-              <p className="mb-6 text-sm" style={{ color: '#555555', fontFamily: 'Montserrat, sans-serif' }}>
+              <p className="mb-6 text-sm" style={{ color: '#555555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                 You&apos;ve played {CHECK_IN_INTERVAL} cards — how hot do you want to go?
               </p>
               <div className="space-y-3">
@@ -395,11 +395,11 @@ export default function Game() {
                     }}>
                     <div>
                       <span className="font-semibold"
-                        style={{ color: opt.locked ? '#aaa' : '#555555', fontFamily: 'Montserrat, sans-serif' }}>
+                        style={{ color: opt.locked ? '#aaa' : '#555555', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                         {opt.desc}
                       </span>
                       <span className="ml-2 text-sm"
-                        style={{ color: opt.locked ? '#bbb' : '#888', fontFamily: 'Montserrat, sans-serif' }}>
+                        style={{ color: opt.locked ? '#bbb' : '#888', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                         {opt.label}
                       </span>
                       {!opt.locked && opt.level === gameState.currentLevel && (
@@ -407,7 +407,7 @@ export default function Game() {
                       )}
                       {opt.locked && (
                         <span className="ml-2 text-xs font-semibold px-2 py-0.5 rounded-full"
-                          style={{ backgroundColor: '#7b0000', color: '#fff', fontFamily: 'Montserrat, sans-serif' }}>
+                          style={{ backgroundColor: '#7b0000', color: '#fff', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                           Premium 🔒
                         </span>
                       )}
@@ -418,7 +418,7 @@ export default function Game() {
               </div>
 
               <div className="mt-4 p-3 rounded-xl" style={{ backgroundColor: '#FCF9E8', border: '1px solid #B9340B' }}>
-                <p className="text-xs" style={{ color: '#B9340B', fontFamily: 'Montserrat, sans-serif' }}>
+                <p className="text-xs" style={{ color: '#B9340B', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                   🌶️ <strong>Want L4 &amp; L5?</strong> Unlock the Extra Hot expansion at{' '}
                   <a href={WEBSITE_URL} target="_blank" rel="noopener noreferrer"
                     className="underline font-semibold hover:opacity-80">
@@ -429,7 +429,7 @@ export default function Game() {
 
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <button onClick={handleEndGame} className="text-sm hover:opacity-70 transition-opacity"
-                  style={{ color: '#888', fontFamily: 'Montserrat, sans-serif' }}>
+                  style={{ color: '#888', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                   End game &amp; see results →
                 </button>
               </div>
@@ -465,13 +465,13 @@ export default function Game() {
         {/* Top bar */}
         <div className="flex items-center justify-between mb-6 max-w-2xl mx-auto">
           <button onClick={() => router.push('/consent')} className="hover:opacity-70 transition-opacity text-sm"
-            style={{ color: '#B9340B', fontFamily: 'Montserrat, sans-serif' }}>← Back</button>
+            style={{ color: '#B9340B', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>← Back</button>
           <div className="text-sm font-semibold px-4 py-1 rounded-full"
-            style={{ backgroundColor: '#fff', color: '#B9340B', fontFamily: 'Montserrat, sans-serif', border: '1px solid #B9340B' }}>
+            style={{ backgroundColor: '#fff', color: '#B9340B', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif', border: '1px solid #B9340B' }}>
             {getModeName(currentLevel)} · {getLevelLabel(currentLevel)}
           </div>
           <button onClick={handleEndGame} className="text-sm hover:opacity-70 transition-opacity"
-            style={{ color: '#888', fontFamily: 'Montserrat, sans-serif' }}>End</button>
+            style={{ color: '#888', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>End</button>
         </div>
 
         {/* Current player banner */}
@@ -481,21 +481,21 @@ export default function Game() {
             <div className="flex items-center gap-4">
               <PlayerAvatar avatarId={currentPlayer?.avatar ?? ''} name={currentPlayer?.name ?? ''} size={80} borderColor="#B9340B" />
               <div>
-                <p className="text-xs uppercase tracking-widest mb-0.5" style={{ color: '#888', fontFamily: 'Montserrat, sans-serif' }}>
+                <p className="text-xs uppercase tracking-widest mb-0.5" style={{ color: '#888', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                   Current Player
                 </p>
                 <p className="text-2xl font-bold leading-tight" style={{ color: '#B9340B', fontFamily: 'Futura, sans-serif' }}>
                   {currentPlayer?.name}
                 </p>
-                <p className="text-xs mt-0.5" style={{ color: '#888', fontFamily: 'Montserrat, sans-serif' }}>
+                <p className="text-xs mt-0.5" style={{ color: '#888', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                   Spice L{currentPlayer?.spiceLevel}
                 </p>
               </div>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <p className="text-xs uppercase tracking-widest" style={{ color: '#888', fontFamily: 'Montserrat, sans-serif' }}>Up next</p>
+              <p className="text-xs uppercase tracking-widest" style={{ color: '#888', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>Up next</p>
               <PlayerAvatar avatarId={nextPlayer?.avatar ?? ''} name={nextPlayer?.name ?? ''} size={48} borderColor="#498379" />
-              <p className="text-sm font-medium" style={{ color: '#498379', fontFamily: 'Montserrat, sans-serif' }}>
+              <p className="text-sm font-medium" style={{ color: '#498379', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                 {nextPlayer?.name}
               </p>
             </div>
@@ -510,7 +510,7 @@ export default function Game() {
                 style={{ backgroundColor: i < cardsInRound ? '#B9340B' : '#d1d5db', maxWidth: '36px' }} />
             ))}
           </div>
-          <p className="text-xs mt-1" style={{ color: '#888', fontFamily: 'Montserrat, sans-serif' }}>
+          <p className="text-xs mt-1" style={{ color: '#888', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
             {cardsInRound}/{CHECK_IN_INTERVAL} cards · heat check-in at {CHECK_IN_INTERVAL}
           </p>
         </div>
@@ -521,17 +521,17 @@ export default function Game() {
             <div className="text-white p-6 text-center" style={headerStyle(currentLevel)}>
               <div className="text-4xl mb-2">{modeEmoji(currentLevel)}</div>
               <h2 className="text-xl font-bold" style={{ fontFamily: 'Futura, sans-serif' }}>{getModeName(currentLevel)}</h2>
-              <p className="text-sm opacity-80 mt-1" style={{ fontFamily: 'Montserrat, sans-serif' }}>{getLevelLabel(currentLevel)}</p>
+              <p className="text-sm opacity-80 mt-1" style={{ fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>{getLevelLabel(currentLevel)}</p>
             </div>
             <div className="p-8">
               <p className="text-2xl leading-relaxed text-center mb-8"
-                style={{ color: '#333', fontFamily: 'Montserrat, sans-serif' }}>
+                style={{ color: '#333', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
                 {currentCard.text}
               </p>
               <div className="flex flex-wrap justify-center gap-2 mb-8">
                 {currentCard.tags.map(tag => (
                   <span key={tag} className="px-3 py-1 text-sm rounded-full border"
-                    style={{ backgroundColor: '#FCF9E8', color: '#B9340B', borderColor: '#B9340B', fontFamily: 'Montserrat, sans-serif', opacity: 0.85 }}>
+                    style={{ backgroundColor: '#FCF9E8', color: '#B9340B', borderColor: '#B9340B', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif', opacity: 0.85 }}>
                     {tag}
                   </span>
                 ))}
@@ -550,7 +550,7 @@ export default function Game() {
               </div>
             </div>
           </div>
-          <div className="text-center mt-5 space-y-1 text-sm" style={{ color: '#888', fontFamily: 'Montserrat, sans-serif' }}>
+          <div className="text-center mt-5 space-y-1 text-sm" style={{ color: '#888', fontFamily: 'Avenir, Avenir Next, Nunito, sans-serif' }}>
             <p>💡 Anyone can skip any card — no explanation needed</p>
             <p>🔥 Heat check-in every {CHECK_IN_INTERVAL} cards to turn up the heat!</p>
           </div>

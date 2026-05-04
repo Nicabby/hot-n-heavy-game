@@ -17,7 +17,7 @@
   --tgol-cream: #F7F3E2;         /* COSMIC LATTE - Background Cream */
   --tgol-ivory: #FCF9E8;         /* IVORY - Secondary Background */
   --tgol-dark-grey: #555555;     /* DAVY'S GREY - Typography */
-  
+
   /* Secondary Brand Colors */
   --tgol-dark-blue: #034078;     /* INDIGO DYE */
   --tgol-light-blue: #05A2D6;    /* BLUE GREEN */
@@ -123,11 +123,11 @@ a {
 
 /* Vintage-inspired gradients */
 .vintage-gradient {
-  background: linear-gradient(135deg, 
-    var(--tgol-cream) 0%, 
-    #f9f7f4 25%, 
-    #f5f0e8 50%, 
-    #f1ebe3 75%, 
+  background: linear-gradient(135deg,
+    var(--tgol-cream) 0%,
+    #f9f7f4 25%,
+    #f5f0e8 50%,
+    #f1ebe3 75%,
     var(--tgol-cream) 100%);
 }
 
@@ -196,16 +196,13 @@ a {
 .vintage-card {
   background: linear-gradient(145deg, #ffffff 0%, #f8f6f3 100%);
   border: 2px solid #e5d5c3;
-  box-shadow: 
+  box-shadow:
     0 4px 8px rgba(0,0,0,0.1),
     inset 0 1px 0 rgba(255,255,255,0.8);
 }
 
 .vintage-card:hover {
-  box-shadow: 
-    0 8px 16px rgba(0,0,0,0.15),
-.vintage-card:hover {
-  box-shadow: 
+  box-shadow:
     0 8px 16px rgba(0,0,0,0.15),
     inset 0 1px 0 rgba(255,255,255,0.8);
   transform: translateY(-2px);

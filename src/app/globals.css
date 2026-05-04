@@ -204,4 +204,31 @@ a {
 .vintage-card:hover {
   box-shadow: 
     0 8px 16px rgba(0,0,0,0.15),
-    inset 0 1px 
+.vintage-card:hover {
+  box-shadow: 
+    0 8px 16px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+  transform: translateY(-2px);
+}
+
+/* Text shadow for vintage feel */
+.vintage-text {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Flame selector styles */
+.flame-selector {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: grayscale(0.7);
+}
+
+.flame-selector:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.flame-selector.active {
+  filter: grayscale(0);
+  animation: flame-flicker 1s ease-in-out infinite;
+}

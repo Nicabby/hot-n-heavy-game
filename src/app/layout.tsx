@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { GameProvider } from '@/context/GameContext'
 
 export const metadata: Metadata = {
   title: 'The Game of Lifestyle - TGOL Digital',
@@ -8,21 +9,19 @@ export const metadata: Metadata = {
   authors: [{ name: 'TGOL Digital' }],
   creator: 'TGOL Digital',
   publisher: 'TGOL Digital',
-  robots: 'noindex, nofollow', // Since this is adult content
+  robots: 'noindex, nofollow',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className="bg-tgol-cream min-h-screen font-futura">
-        {children}
+        <GameProvider>
+          {children}
+        </GameProvider>
       </body>
     </html>
   )

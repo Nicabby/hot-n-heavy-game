@@ -4,32 +4,59 @@ import { useState, useEffect } from 'react'
 import { AudioManager } from '@/utils/audioManager'
 
 export default function AudioToggle() {
-  const [isAudioEnabled, setIsAudioEnabled] = useState(true)
-  const audioManager = AudioManager.getInstance()
+  const [muted, setMuted] = useState(false)
+  const [visible, setVisible] = useState(false)
+  const am = AudioManager.getInstance()
 
   useEffect(() => {
-    setIsAudioEnabled(audioManager.isAudioEnabled())
-  }, [])
+    setMuted(am.isMuted())
+    // Only show the button once music has started
+    const interval = setInterval(() => {
+      setVisible(am.isMusicPlaying() || am.getCurrentTrackId() !== null)
+    }, 500)
+    return () => clearInterval(interval)
+  }, [am])
 
-  const toggleAudio = () => {
-    const newState = !isAudioEnabled
-    setIsAudioEnabled(newState)
-    audioManager.setEnabled(newState)
-    
-    if (newState) {
-      audioManager.playButtonClick()
-    }
+  if (!visible) return null
+
+  const toggle = () => {
+    const next = !muted
+    setMuted(next)
+    am.setMuted(next)
   }
 
   return (
     <button
-      onClick={toggleAudio}
-      className="fixed bottom-4 left-4 z-50 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg hover:shadow-xl transition-all border border-tgol-red/20 pin-up-button"
-      title={isAudioEnabled ? 'Disable sound' : 'Enable sound'}
+      onClick={toggle}
+      title={muted ? 'Unmute music' : 'Mute music'}
+      style={{
+        position: 'fixed',
+        bottom: '20px',
+        right: '20px',
+        zIndex: 9999,
+        background: 'rgba(255,255,255,0.92)',
+        border: '2px solid #B9340B',
+        borderRadius: '50%',
+        width: '48px',
+        height: '48px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        cursor: 'pointer',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+        fontSize: '20px',
+        transition: 'transform 0.15s, box-shadow 0.15s',
+      }}
+      onMouseEnter={e => {
+        (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1.1)'
+        ;(e.currentTarget as HTMLButtonElement).style.boxShadow = '0 6px 18px rgba(185,52,11,0.25)'
+      }}
+      onMouseLeave={e => {
+        (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)'
+        ;(e.currentTarget as HTMLButtonElement).style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)'
+      }}
     >
-      <span className="text-xl">
-        {isAudioEnabled ? '🔊' : '🔇'}
-      </span>
+      {muted ? '🔇' : '🎵'}
     </button>
   )
 }

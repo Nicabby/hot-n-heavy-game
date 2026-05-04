@@ -1,131 +1,100 @@
-export class AudioManager {
-  private static instance: AudioManager
-  private audioContext: AudioContext | null = null
-  private sounds: Map<string, AudioBuffer> = new Map()
-  private isEnabled: boolean = true
+// AudioManager – singleton for background music + sound effects
+// Background music uses HTMLAudioElement (reliable looping across navigation)
+// Sound effects use lightweight Audio instances
 
-  private constructor() {
-    // Initialize audio context on user interaction
-    if (typeof window !== 'undefined') {
-      document.addEventListener('click', this.initializeAudioContext.bind(this), { once: true })
+class AudioManagerClass {
+  private static instance: AudioManagerClass
+  private bgAudio: HTMLAudioElement | null = null
+  private currentTrackId: string | null = null
+  private muted: boolean = false
+  private bgVolume: number = 0.35
+
+  private constructor() {}
+
+  public static getInstance(): AudioManagerClass {
+    if (!AudioManagerClass.instance) {
+      AudioManagerClass.instance = new AudioManagerClass()
+    }
+    return AudioManagerClass.instance
+  }
+
+  // ---- Background Music ----------------------------------------
+
+  public startMusic(src: string, trackId: string): void {
+    if (typeof window === 'undefined') return
+
+    // Already playing this track — do nothing
+    if (this.currentTrackId === trackId && this.bgAudio && !this.bgAudio.paused) return
+
+    // Stop any existing track
+    this.stopMusic()
+
+    this.bgAudio = new Audio(src)
+    this.bgAudio.loop = true
+    this.bgAudio.volume = this.muted ? 0 : this.bgVolume
+    this.bgAudio.play().catch(() => {
+      // Autoplay blocked — will play on next user interaction
+    })
+    this.currentTrackId = trackId
+  }
+
+  public stopMusic(): void {
+    if (this.bgAudio) {
+      this.bgAudio.pause()
+      this.bgAudio.src = ''
+      this.bgAudio = null
+    }
+    this.currentTrackId = null
+  }
+
+  public setMuted(muted: boolean): void {
+    this.muted = muted
+    if (this.bgAudio) {
+      this.bgAudio.volume = muted ? 0 : this.bgVolume
     }
   }
 
-  public static getInstance(): AudioManager {
-    if (!AudioManager.instance) {
-      AudioManager.instance = new AudioManager()
-    }
-    return AudioManager.instance
+  public isMuted(): boolean {
+    return this.muted
   }
 
-  private async initializeAudioContext() {
+  public getCurrentTrackId(): string | null {
+    return this.currentTrackId
+  }
+
+  public isMusicPlaying(): boolean {
+    return this.bgAudio !== null && !this.bgAudio.paused
+  }
+
+  // ---- Sound Effects -------------------------------------------
+
+  public playSound(src: string, volume: number = 0.6): void {
+    if (typeof window === 'undefined' || this.muted) return
     try {
-      this.audioContext = new (window.AudioContext || (window as any).webkitAudioContext)()
-      await this.preloadSounds()
-    } catch (error) {
-      console.warn('Audio initialization failed:', error)
-    }
+      const audio = new Audio(src)
+      audio.volume = Math.max(0, Math.min(1, volume))
+      audio.play().catch(() => {})
+    } catch {}
   }
 
-  private async preloadSounds() {
-    const soundFiles = [
-      { name: 'cardShuffle', url: '/audio/card-shuffle.mp3' },
-      { name: 'backgroundMusic', url: '/audio/bg-music.mp3' },
-      { name: 'buttonClick', url: '/audio/button-click.mp3' },
-      { name: 'cardFlip', url: '/audio/card-flip.mp3' },
-      { name: 'successChime', url: '/audio/success-chime.mp3' }
-    ]
-
-    for (const sound of soundFiles) {
-      try {
-        await this.loadSound(sound.name, sound.url)
-      } catch (error) {
-        console.warn(`Failed to load sound ${sound.name}:`, error)
-      }
-    }
+  public playCardFlip(): void {
+    this.playSound('/audio/card-flip.mp3', 0.7)
   }
 
-  private async loadSound(name: string, url: string): Promise<void> {
-    if (!this.audioContext) return
-
-    try {
-      const response = await fetch(url)
-      if (!response.ok) {
-        // Create a placeholder silent audio buffer for missing files
-        const buffer = this.audioContext.createBuffer(1, this.audioContext.sampleRate * 0.1, this.audioContext.sampleRate)
-        this.sounds.set(name, buffer)
-        return
-      }
-      
-      const arrayBuffer = await response.arrayBuffer()
-      const audioBuffer = await this.audioContext.decodeAudioData(arrayBuffer)
-      this.sounds.set(name, audioBuffer)
-    } catch (error) {
-      // Create silent placeholder
-      if (this.audioContext) {
-        const buffer = this.audioContext.createBuffer(1, this.audioContext.sampleRate * 0.1, this.audioContext.sampleRate)
-        this.sounds.set(name, buffer)
-      }
-    }
+  public playButtonClick(): void {
+    this.playSound('/audio/button-click.mp3', 0.5)
   }
 
-  public async playSound(soundName: string, volume: number = 1, loop: boolean = false): Promise<void> {
-    if (!this.isEnabled || !this.audioContext || !this.sounds.has(soundName)) {
-      return
-    }
-
-    try {
-      const audioBuffer = this.sounds.get(soundName)!
-      const source = this.audioContext.createBufferSource()
-      const gainNode = this.audioContext.createGain()
-
-      source.buffer = audioBuffer
-      source.loop = loop
-      gainNode.gain.value = Math.max(0, Math.min(1, volume))
-
-      source.connect(gainNode)
-      gainNode.connect(this.audioContext.destination)
-
-      source.start()
-    } catch (error) {
-      console.warn(`Failed to play sound ${soundName}:`, error)
-    }
+  public playSuccessChime(): void {
+    this.playSound('/audio/success-chime.mp3', 0.8)
   }
 
-  public setEnabled(enabled: boolean) {
-    this.isEnabled = enabled
-  }
-
-  public isAudioEnabled(): boolean {
-    return this.isEnabled
-  }
-
-  // Specific sound methods for game events
-  public playCardShuffle() {
-    this.playSound('cardShuffle', 0.6)
-  }
-
-  public playCardFlip() {
-    this.playSound('cardFlip', 0.7)
-  }
-
-  public playButtonClick() {
-    this.playSound('buttonClick', 0.5)
-  }
-
-  public playSuccessChime() {
-    this.playSound('successChime', 0.8)
-  }
-
-  public startBackgroundMusic() {
-    this.playSound('backgroundMusic', 0.3, true)
-  }
-
-  public stopAllSounds() {
-    // Note: This is a simplified version. In a full implementation,
-    // you'd want to track active sources and stop them individually
-    if (this.audioContext) {
-      this.audioContext.suspend()
-    }
-  }
+  // Legacy compat
+  public isAudioEnabled(): boolean { return !this.muted }
+  public setEnabled(enabled: boolean): void { this.setMuted(!enabled) }
+  public startBackgroundMusic(): void {}
+  public stopAllSounds(): void { this.stopMusic() }
+  public playCardShuffle(): void { this.playSound('/audio/card-shuffle.mp3', 0.6) }
 }
+
+export const AudioManager = AudioManagerClass

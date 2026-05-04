@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { GameProvider } from '@/context/GameContext'
+import ClientShell from '@/components/ClientShell'
 
 export const metadata: Metadata = {
   title: 'The Game of Lifestyle - TGOL Digital',
@@ -20,7 +21,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-tgol-cream min-h-screen font-futura">
         <GameProvider>
-          {children}
+          <ClientShell>
+            {children}
+          </ClientShell>
         </GameProvider>
       </body>
     </html>

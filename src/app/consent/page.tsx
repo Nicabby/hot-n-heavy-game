@@ -226,8 +226,7 @@ export default function Consent() {
           </div>
 
           {/* Music Picker */}
-          <div className="bg-white rounded-2xl shadow-2xl p-10 border-4"
-            style={{ borderColor: '#498379' }}>
+          <div style={{ background: '#E8F5F3', border: '6px solid #498379', borderRadius: '16px', padding: '40px', marginTop: '32px' }}>
             <h2 className="text-3xl font-futura-bold tracking-wide mb-3 text-center" style={{ color: '#498379' }}>
               🎵 CHOOSE YOUR VIBE
             </h2>

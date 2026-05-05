@@ -1,0 +1,193 @@
+/* Official TGOL Brand Variables and Custom Classes */
+
+:root {
+  --tgol-red: #B9340B;
+  --tgol-green: #498379;
+  --tgol-cream: #F7F3E2;
+  --tgol-ivory: #FCF9E8;
+  --tgol-dark-grey: #555555;
+  --tgol-dark-blue: #034078;
+  --tgol-light-blue: #05A2D6;
+  --tgol-orange: #DE6F20;
+  --tgol-olive: #7C812B;
+  --tgol-violet: #654f6f;
+  --tgol-gold: #F4C431;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: Avenir, "Avenir Next", Nunito, "Gill Sans", sans-serif;
+  background-color: var(--tgol-cream);
+  color: var(--tgol-dark-grey);
+}
+
+body {
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.font-mission {
+  font-family: "Mission Script", "Dancing Script", cursive;
+}
+
+.font-futura {
+  font-family: "Futura Std", Futura, Jost, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.font-futura-bold {
+  font-family: "Futura Std Bold Condensed", Futura, Jost, "Arial Black", sans-serif;
+  font-weight: 800;
+  font-stretch: condensed;
+  letter-spacing: 0.03em;
+}
+
+.font-futura-medium {
+  font-family: "Futura Std Medium", Futura, Jost, Arial, sans-serif;
+  font-weight: 600;
+}
+
+.font-avenir {
+  font-family: Avenir, "Avenir Next", Nunito, "Gill Sans", sans-serif;
+  font-weight: 400;
+}
+
+@keyframes wink {
+  0%, 90%, 100% { opacity: 1; }
+  95% { opacity: 0.1; }
+}
+
+@keyframes flame-flicker {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.05) rotate(-1deg); }
+  50% { transform: scale(0.95) rotate(1deg); }
+  75% { transform: scale(1.02) rotate(-0.5deg); }
+}
+
+@keyframes card-flip {
+  0% { transform: perspective(1000px) rotateY(0deg); }
+  50% { transform: perspective(1000px) rotateY(-90deg); }
+  100% { transform: perspective(1000px) rotateY(0deg); }
+}
+
+@keyframes pin-up-entrance {
+  0% { transform: translateY(20px) scale(0.9); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.wink {
+  animation: wink 3s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.flame-flicker {
+  animation: flame-flicker 2s ease-in-out infinite;
+}
+
+.card-flip {
+  animation: card-flip 0.6s ease-in-out;
+}
+
+.pin-up-entrance {
+  animation: pin-up-entrance 0.8s ease-out forwards;
+}
+
+.vintage-gradient {
+  background: linear-gradient(135deg, var(--tgol-cream) 0%, #f9f7f4 25%, #f5f0e8 50%, #f1ebe3 75%, var(--tgol-cream) 100%);
+}
+
+.pin-up-gradient {
+  background: linear-gradient(135deg, #fef7f0 0%, #fdf2f8 25%, #fce7f3 50%, #fbcfe8 75%, #f9a8d4 100%);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--tgol-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tgol-red);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b2a07;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pin-up-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.pin-up-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(185, 52, 11, 0.2);
+}
+
+.pin-up-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.pin-up-button:hover::before {
+  left: 100%;
+}
+
+.vintage-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8f6f3 100%);
+  border: 2px solid #e5d5c3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.vintage-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.vintage-text {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.flame-selector {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: grayscale(0.7);
+}
+
+.flame-selector:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.flame-selector.active {
+  filter: grayscale(0);
+  animation: flame-flicker 1s ease-in-out infinite;
+}

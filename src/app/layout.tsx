@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import './brand.css'
 import { GameProvider } from '@/context/GameContext'
 import ClientShell from '@/components/ClientShell'
 

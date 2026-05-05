@@ -2,7 +2,7 @@
 // v2 - includes music picker
 
 import { useRouter } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import TGOLBrandLogo from '@/components/TGOLBrandLogo'
 import categoriesData from '@/data/categories.json'
 import { MUSIC_TRACKS } from '@/data/musicTracks'
@@ -33,7 +33,7 @@ export default function Consent() {
   } = useGame()
 
   const [selectedTrackId, setSelectedTrackId] = useState<string | null>(null)
-  const am = AudioManager.getInstance()
+  const amRef = useRef(AudioManager.getInstance())
 
   const toggleCategory = (category: string) => {
     setSelectedCategories(
@@ -46,11 +46,11 @@ export default function Consent() {
   const handleTrackSelect = (trackId: string | null) => {
     setSelectedTrackId(trackId)
     if (trackId === null) {
-      am.stopMusic()
+      amRef.current.stopMusic()
     } else {
       const track = MUSIC_TRACKS.find(t => t.id === trackId)
       if (track) {
-        am.startMusic(track.file, track.id)
+        amRef.current.startMusic(track.file, track.id)
       }
     }
   }

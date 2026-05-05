@@ -1,25 +1,27 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { AudioManager } from '@/utils/audioManager'
 
 export default function AudioToggle() {
   const [muted, setMuted] = useState(false)
   const [visible, setVisible] = useState(false)
-  const am = AudioManager.getInstance()
+  const amRef = useRef(AudioManager.getInstance())
 
   useEffect(() => {
+    const am = amRef.current
     setMuted(am.isMuted())
     // Only show the button once music has started
     const interval = setInterval(() => {
       setVisible(am.isMusicPlaying() || am.getCurrentTrackId() !== null)
     }, 500)
     return () => clearInterval(interval)
-  }, [am])
+  }, [])
 
   if (!visible) return null
 
   const toggle = () => {
+    const am = amRef.current
     const next = !muted
     setMuted(next)
     am.setMuted(next)
@@ -48,11 +50,11 @@ export default function AudioToggle() {
         transition: 'transform 0.15s, box-shadow 0.15s',
       }}
       onMouseEnter={e => {
-        (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1.1)'
+        ;(e.currentTarget as HTMLButtonElement).style.transform = 'scale(1.1)'
         ;(e.currentTarget as HTMLButtonElement).style.boxShadow = '0 6px 18px rgba(185,52,11,0.25)'
       }}
       onMouseLeave={e => {
-        (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)'
+        ;(e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)'
         ;(e.currentTarget as HTMLButtonElement).style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)'
       }}
     >
